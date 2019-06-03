@@ -13,37 +13,39 @@
 		<title>Помошник в создании персонажа</title>
 	</head>
 	<body>
-		<table id="basicInfoTable">
-			<caption>Листок персонажа вампира</caption>
-			<tr>
-				<td>Имя</td>
-				<td>
-					<input type="text" id="characterName" size="30" />
-				</td>
-				<td>Натура</td>
-				<td>
-					<input type="text" id="characterNature" size="30" />
-				</td>
-				<td>Поколение</td>
-				<td>
-					<select id="characterGenerationList">
-						<option value="3">III</option>
-						<option value="4">IV</option>
-						<option value="5">V</option>
-						<option value="6">VI</option>
-						<option value="7">VII</option>
-						<option value="8">VIII</option>
-						<option value="9">IX</option>
-						<option value="10">X</option>
-						<option value="11">XI</option>
-						<option value="12">XII</option>
-						<option value="13" selected>XIII</option>
-						<option value="14">XIV</option>
-						<option value="15">XV</option>
-					</select>
-				</td>
-			</tr>
-								<tr>
+		<div style="overflow-x:auto;">
+			<form>
+				<table id="basicInfoTable">
+					<caption>Листок персонажа вампира</caption>
+					<tr>
+						<td>Имя</td>
+						<td>
+							<input type="text" id="characterName" size="30" />
+						</td>
+						<td>Натура</td>
+						<td>
+							<input type="text" id="characterNature" size="30" />
+						</td>
+						<td>Поколение</td>
+						<td>
+							<select id="characterGenerationList">
+								<option value="3">III</option>
+								<option value="4">IV</option>
+								<option value="5">V</option>
+								<option value="6">VI</option>
+								<option value="7">VII</option>
+								<option value="8">VIII</option>
+								<option value="9">IX</option>
+								<option value="10">X</option>
+								<option value="11">XI</option>
+								<option value="12">XII</option>
+								<option value="13" selected>XIII</option>
+								<option value="14">XIV</option>
+								<option value="15">XV</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
 						<td>Игрок</td>
 						<td>
 							<input type="text" id="characterUser" size="30" />
@@ -120,7 +122,12 @@
 						<td>
 							<input type="text" id="characterConcept" size="30" />
 						</td>
+						<tr>
+							<td colspan="6">Аттрибуты</td>
+						</tr>
 					</tr>
-		</table>
+				</table>
+			</form>
+		</div>
 	</body>
 </html>
