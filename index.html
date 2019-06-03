@@ -7,7 +7,7 @@
 				margin-right:auto;
 				width: 100%;
 		}
-		td#centeredCell {
+		.centeredCell {
 			text-align: center;
 		}
 		</style>
@@ -30,7 +30,7 @@
 							<input type="text" id="characterNature" size="30" />
 						</td>
 						<td>Поколение</td>
-						<td id="centeredCell">
+						<td class="centeredCell">
 							<select id="characterGenerationList">
 								<option value="3">III</option>
 								<option value="4">IV</option>
@@ -68,7 +68,7 @@
 							<input type="text" id="characterStory" size="30" />
 						</td>
 						<td>Клан</td>
-						<td id="centeredCell">
+						<td class="centeredCell">
 							<select id="characterClan" required>
 								<option disabled selected value> -- Выберите клан -- </option>
 								<option disabled>Камарилья</option>
@@ -126,13 +126,17 @@
 							<input type="text" id="characterConcept" size="30" />
 						</td>
 					</tr>
+					<tr>
+						<td class="centeredCell" colspan="6">Аттрибуты</td>
 					</tr>
 					<tr>
-						<td id="centeredCell" colspan="2">Физические</td>
-						<td id="centeredCell" colspan="2">Социальные</td>
-						<td id="centeredCell" colspan="2">Ментайные</td>
+						<td class="centeredCell" colspan="2">Физические</td>
+						<td class="centeredCell" colspan="2">Социальные</td>
+						<td class="centeredCell" colspan="2">Ментайные</td>
 					</tr>
 					<tr>
+						<td>Сила</td>
+						<td>
 							<div style="display: inline-block;">
 								<img src="images/EmptyPoint.png" alt="EmptyPoint">
 								<img src="images/EmptyPoint.png" alt="EmptyPoint">
