@@ -7,6 +7,9 @@
 				margin-right:auto;
 				width: 100%;
 		}
+		td#centeredCell {
+			text-align: center;
+		}
 		</style>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,7 +30,7 @@
 							<input type="text" id="characterNature" size="30" />
 						</td>
 						<td>Поколение</td>
-						<td>
+						<td id="centeredCell">
 							<select id="characterGenerationList">
 								<option value="3">III</option>
 								<option value="4">IV</option>
@@ -65,7 +68,7 @@
 							<input type="text" id="characterStory" size="30" />
 						</td>
 						<td>Клан</td>
-						<td>
+						<td id="centeredCell">
 							<select id="characterClan" required>
 								<option disabled selected value> -- Выберите клан -- </option>
 								<option disabled>Камарилья</option>
@@ -123,7 +126,7 @@
 							<input type="text" id="characterConcept" size="30" />
 						</td>
 						<tr>
-							<td colspan="6">Аттрибуты</td>
+							<td id="centeredCell" colspan="6">Аттрибуты</td>
 						</tr>
 					</tr>
 				</table>
