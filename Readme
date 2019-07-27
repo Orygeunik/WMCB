@@ -1,0 +1,16 @@
+Planned target used technologies:
+HTML5
+CSS lvl 4
+Clean javascript (es6 and above)
+
+Validate css at:
+https://codebeautify.org/cssvalidate
+https://www.cssportal.com/css-validator/
+
+Validate js at:
+https://jshint.com - pass
+https://codebeautify.org/jsvalidate - pass
+
+Validate html at:
+https://validator.w3.org/nu/#textarea
+https://www.freeformatter.com/html-validator.html
