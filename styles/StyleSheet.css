@@ -1,17 +1,21 @@
-table#basicInfoTable {
-	margin-left: auto;
-	margin-right: auto;
-	width: 100%;
+.basicInfoTable {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
 
 .centeredCell {
-	text-align: center;
+    text-align: center;
 }
 
 .fromRight {
-	text-align: right;
+    text-align: right;
 }
 
 .pointContainer {
-	display: inline-block;
+    display: inline-block;
+}
+
+.pointContainer img {
+    padding: 0 2px;
 }
