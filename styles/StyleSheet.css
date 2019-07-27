@@ -1,0 +1,17 @@
+table#basicInfoTable {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+.centeredCell {
+	text-align: center;
+}
+
+.fromRight {
+	text-align: right;
+}
+
+.pointContainer {
+	display: inline-block;
+}
