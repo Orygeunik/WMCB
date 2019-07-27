@@ -1,711 +1,720 @@
 <!DOCTYPE html>
 <html lang="ru">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Помошник в создании персонажа</title>
-		<link href="styles/StyleSheet.css" rel="stylesheet" type="text/css">
-	</head>
-	<body>
-		<div style="overflow-x:auto;">
-			<form>
-				<table class="basicInfoTable">
-					<caption>Листок персонажа вампира</caption>
-					<tr>
-						<td>Имя</td>
-						<td>
-							<input type="text" id="characterName" size="30" />
-						</td>
-						<td>Натура</td>
-						<td>
-							<input type="text" id="characterNature" size="30" />
-						</td>
-						<td>Поколение</td>
-						<td class="centeredCell">
-							<select id="characterGenerationList">
-								<option value="3">III</option>
-								<option value="4">IV</option>
-								<option value="5">V</option>
-								<option value="6">VI</option>
-								<option value="7">VII</option>
-								<option value="8">VIII</option>
-								<option value="9">IX</option>
-								<option value="10">X</option>
-								<option value="11">XI</option>
-								<option value="12">XII</option>
-								<option value="13" selected>XIII</option>
-								<option value="14">XIV</option>
-								<option value="15">XV</option>
-							</select>
-						</td>
-					</tr>
-					<tr>
-						<td>Игрок</td>
-						<td>
-							<input type="text" id="characterUser" size="30" />
-						</td>
-						<td>Маска</td>
-						<td>
-							<input type="text" id="characterMask" size="30" />
-						</td>
-						<td>Убежище</td>
-						<td>
-							<input type="text" id="characterShelter" size="30" />
-						</td>
-					</tr>
-					<tr>
-						<td>Хроника</td>
-						<td>
-							<input type="text" id="characterStory" size="30" />
-						</td>
-						<td>Клан</td>
-						<td class="centeredCell">
-							<select id="characterClan" required>
-								<option disabled selected value> -- Выберите клан -- </option>
-								<option disabled>Камарилья</option>
-								<option value="Brujah">&nbsp;Бруха</option>
-								<option value="Ventrue">&nbsp;Вентру</option>
-								<option value="Gangrel">&nbsp;Гангрел</option>
-								<option value="Gargoyles">&nbsp;Горгульи</option>
-								<option value="Caitiff">&nbsp;Каитиффы</option>
-								<option value="Malkavian">&nbsp;Малкавианы</option>
-								<option value="Nosferatu">&nbsp;Носферату</option>
-								<option value="Lasombra Antitribu">&nbsp;Отступники Ласомбра</option>
-								<option value="Tremere">&nbsp;Тремер</option>
-								<option value="Toreador">&nbsp;Тореадор</option>
-								<option disabled>Шабаш</option>
-								<option value="Ahrimanes">&nbsp;Аримейн</option>
-								<option value="Serpents of the Light">&nbsp;Змеи Света</option>
-								<option value="Kiasyd">&nbsp;Каэсиды</option>
-								<option value="BloodBrothers">&nbsp;Кровавые Братья</option>
-								<option value="Lasombra">&nbsp;Ласомбра</option>
-								<option value="AssamiteAntitribu">&nbsp;Отступники Ассамитов</option>
-								<option value="BrujahAntitribu">&nbsp;Отступники Бруха</option>
-								<option value="VentrueAntitribu">&nbsp;Отступники Вентру</option>
-								<option value="GangrelAntitribu">&nbsp;Отступники Гангрел</option>
-								<option value="MalkavianAntitribu">&nbsp;Отступники Малкавианы</option>
-								<option value="NosferatuAntitribu">&nbsp;Отступники Носферату</option>
-								<option value="RavnosAntitribu">&nbsp;Отступники Равнос</option>
-								<option value="SalubriAntitribu">&nbsp;Отступники Салюбри</option>
-								<option value="ToreadorAntitribu">&nbsp;Отступники Тореадор</option>
-								<option value="TremereAntitribu">&nbsp;Отступники Тремер</option>
-								<option value="Panders">&nbsp;Пандеры</option>
-								<option value="HarbingersOfSkulls">&nbsp;Предвестники Черепов</option>
-								<option value="Tzimisce">&nbsp;Цимисхи</option>
-								<option disabled>Независимые</option>
-								<option value="Assamite">&nbsp;Ассамиты</option>
-								<option disabled>&nbsp;Касты Ассамитов</option>
-								<option value="Viziers">&nbsp;&nbsp;Визири</option>
-								<option value="Warriors">&nbsp;&nbsp;Воины</option>
-								<option value="Sorcerers">&nbsp;&nbsp;Чародеи</option>
-								<option value="Baali">&nbsp;Баали</option>
-								<option value="ChildrenOfOsiris">&nbsp;Дети Осириса</option>
-								<option value="Giovanni">&nbsp;Джованни</option>
-								<option value="DaughtersOfCacophony">&nbsp;Дочери Какофонии</option>
-								<option value="TrueBrujah">&nbsp;Истинные Бруха</option>
-								<option value="Cappadocian">&nbsp;Каппадокийцы</option>
-								<option value="Nagaraja">&nbsp;Нагараджа</option>
-								<option value="FollowersOfSet">&nbsp;Последователи Сета</option>
-								<option value="Ravnos">&nbsp;Равнос</option>
-								<option value="Salubri">&nbsp;Салюбри</option>
-								<option value="Samedi">&nbsp;Самеди</option>
-								<option value="OldClanTzimisce">&nbsp;Старый клан Цимисхи</option>
-							</select>
-						</td>
-						<td>Концепт</td>
-						<td>
-							<input type="text" id="characterConcept" size="30" />
-						</td>
-					</tr>
-					<tr>
-						<td class="centeredCell" colspan="6"><hr>Аттрибуты<hr></td>
-					</tr>
-					<tr>
-						<td class="centeredCell" colspan="2">Физические</td>
-						<td class="centeredCell" colspan="2">Социальные</td>
-						<td class="centeredCell" colspan="2">Ментайные</td>
-					</tr>
-					<tr>
-						<td>Сила</td>
-						<td class="fromRight">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Обаяние</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Восприятие</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Ловкость</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Манипуляция</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Интеллект</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Выносливость</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Внешность</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Смекалка</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="centeredCell" colspan="6"><hr>Способности<hr></td>
-					</tr>
-					<tr>
-						<td class="centeredCell" colspan="2">Таланты</td>
-						<td class="centeredCell" colspan="2">Навыки</td>
-						<td class="centeredCell" colspan="2">Познания</td>
-					</tr>
-					<tr>
-						<td>Атлетика</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Безопасность</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Академические</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Внимательность</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Вождение</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Законы</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Запугивание</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Выживание</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Компьютеры</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Знание улиц</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Исполнение</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Лингвистика</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Лидерство</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Знание животных</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Медицина</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Рукопашный бой</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Ремесла</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Научные</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Уклонение</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Скрытность</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Оккультизм</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Хитрость</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Стрельба</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Политика</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Экспрессия</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Фехтование</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Расследование</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td>Эмпатия</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Этикет</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-						<td>Финансы</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-					<tr>
-						<td class="centeredCell" colspan="6"><hr>Преимущества<hr></td>
-					</tr>
-					<tr>
-						<td class="centeredCell" colspan="2">Дополнения</td>
-						<td class="centeredCell" colspan="2">Дисциплины</td>
-						<td class="centeredCell" colspan="2">Добродетели</td>
-					</tr>
-					<tr>
-						<td class="centeredCell">
-							<select id="">
-								<option selected value>Пусто</option>
-								<option disabled value>Достоинства</option>
-								<option disabled value>&nbsp;Физические</option>
-								<option>&nbsp;&nbsp;Обострённые чувства (-1 pt)</option>
-								<option>&nbsp;&nbsp;Амибекстер (-1 pt)</option>
-								<option>&nbsp;&nbsp;Внушительный тип (-1 pt)</option>
-								<option>&nbsp;&nbsp;Кошачье равновесие (-1 pt)</option>
-								<option>&nbsp;&nbsp;Жаворонок (-1 pt)</option>
-								<option>&nbsp;&nbsp;Поглощение пищи (-1 pt)</option>
-								<option>&nbsp;&nbsp;Знакомое лицо (-1 pt)</option>
-								<option>&nbsp;&nbsp;Пышущий здоровьем (-2 pt)</option>
-								<option>&nbsp;&nbsp;Чарующий голос (-2 pt)</option>
-								<option>&nbsp;&nbsp;Сорвиголова (-3 pt)</option>
-								<option>&nbsp;&nbsp;Эффективное усвоение (-3 pt)</option>
-								<option>&nbsp;&nbsp;Огромный размер (-4 pt)</option>
-							</select>
-						</td>
-						<td class="fromRight">
-							<div style="display: inline-block;">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-								<img src="images/EmptyPoint.png" alt="EmptyPoint">
-							</div>
-						</td>
-					</tr>
-				</table>
-			</form>
-		</div>
-	</body>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Помошник в создании персонажа</title>
+    <link href="styles/StyleSheet.css" rel="stylesheet" type="text/css">
+    <script async defer src="scripts/MainScript.js"></script>
+    <script async defer src="scripts/Tools.js"></script>
+</head>
+
+<body onload="tuningDocument()">
+    <div style="overflow-x:auto;">
+        <form>
+            <table class="basicInfoTable">
+                <caption>Листок персонажа вампира</caption>
+                <tr>
+                    <td>Имя</td>
+                    <td>
+                        <input type="text" id="characterName" size="30" />
+                    </td>
+                    <td>Натура</td>
+                    <td>
+                        <input type="text" id="characterNature" size="30" />
+                    </td>
+                    <td>Поколение</td>
+                    <td class="centeredCell">
+                        <select id="characterGenerationList">
+                            <option value="3">III</option>
+                            <option value="4">IV</option>
+                            <option value="5">V</option>
+                            <option value="6">VI</option>
+                            <option value="7">VII</option>
+                            <option value="8">VIII</option>
+                            <option value="9">IX</option>
+                            <option value="10">X</option>
+                            <option value="11">XI</option>
+                            <option value="12">XII</option>
+                            <option value="13" selected>XIII</option>
+                            <option value="14">XIV</option>
+                            <option value="15">XV</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Игрок</td>
+                    <td>
+                        <input type="text" id="characterUser" size="30" />
+                    </td>
+                    <td>Маска</td>
+                    <td>
+                        <input type="text" id="characterMask" size="30" />
+                    </td>
+                    <td>Убежище</td>
+                    <td>
+                        <input type="text" id="characterShelter" size="30" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>Хроника</td>
+                    <td>
+                        <input type="text" id="characterStory" size="30" />
+                    </td>
+                    <td>Клан</td>
+                    <td class="centeredCell">
+                        <select id="characterClan" required>
+                            <option disabled selected value> -- Выберите клан -- </option>
+                            <option disabled>Камарилья</option>
+                            <option value="Brujah">&nbsp;Бруха</option>
+                            <option value="Ventrue">&nbsp;Вентру</option>
+                            <option value="Gangrel">&nbsp;Гангрел</option>
+                            <option value="Gargoyles">&nbsp;Горгульи</option>
+                            <option value="Caitiff">&nbsp;Каитиффы</option>
+                            <option value="Malkavian">&nbsp;Малкавианы</option>
+                            <option value="Nosferatu">&nbsp;Носферату</option>
+                            <option value="Lasombra Antitribu">&nbsp;Отступники Ласомбра</option>
+                            <option value="Tremere">&nbsp;Тремер</option>
+                            <option value="Toreador">&nbsp;Тореадор</option>
+                            <option disabled>Шабаш</option>
+                            <option value="Ahrimanes">&nbsp;Аримейн</option>
+                            <option value="Serpents of the Light">&nbsp;Змеи Света</option>
+                            <option value="Kiasyd">&nbsp;Каэсиды</option>
+                            <option value="BloodBrothers">&nbsp;Кровавые Братья</option>
+                            <option value="Lasombra">&nbsp;Ласомбра</option>
+                            <option value="AssamiteAntitribu">&nbsp;Отступники Ассамитов</option>
+                            <option value="BrujahAntitribu">&nbsp;Отступники Бруха</option>
+                            <option value="VentrueAntitribu">&nbsp;Отступники Вентру</option>
+                            <option value="GangrelAntitribu">&nbsp;Отступники Гангрел</option>
+                            <option value="MalkavianAntitribu">&nbsp;Отступники Малкавианы</option>
+                            <option value="NosferatuAntitribu">&nbsp;Отступники Носферату</option>
+                            <option value="RavnosAntitribu">&nbsp;Отступники Равнос</option>
+                            <option value="SalubriAntitribu">&nbsp;Отступники Салюбри</option>
+                            <option value="ToreadorAntitribu">&nbsp;Отступники Тореадор</option>
+                            <option value="TremereAntitribu">&nbsp;Отступники Тремер</option>
+                            <option value="Panders">&nbsp;Пандеры</option>
+                            <option value="HarbingersOfSkulls">&nbsp;Предвестники Черепов</option>
+                            <option value="Tzimisce">&nbsp;Цимисхи</option>
+                            <option disabled>Независимые</option>
+                            <option value="Assamite">&nbsp;Ассамиты</option>
+                            <option disabled>&nbsp;Касты Ассамитов</option>
+                            <option value="Viziers">&nbsp;&nbsp;Визири</option>
+                            <option value="Warriors">&nbsp;&nbsp;Воины</option>
+                            <option value="Sorcerers">&nbsp;&nbsp;Чародеи</option>
+                            <option value="Baali">&nbsp;Баали</option>
+                            <option value="ChildrenOfOsiris">&nbsp;Дети Осириса</option>
+                            <option value="Giovanni">&nbsp;Джованни</option>
+                            <option value="DaughtersOfCacophony">&nbsp;Дочери Какофонии</option>
+                            <option value="TrueBrujah">&nbsp;Истинные Бруха</option>
+                            <option value="Cappadocian">&nbsp;Каппадокийцы</option>
+                            <option value="Nagaraja">&nbsp;Нагараджа</option>
+                            <option value="FollowersOfSet">&nbsp;Последователи Сета</option>
+                            <option value="Ravnos">&nbsp;Равнос</option>
+                            <option value="Salubri">&nbsp;Салюбри</option>
+                            <option value="Samedi">&nbsp;Самеди</option>
+                            <option value="OldClanTzimisce">&nbsp;Старый клан Цимисхи</option>
+                        </select>
+                    </td>
+                    <td>Концепт</td>
+                    <td>
+                        <input type="text" id="characterConcept" size="30" />
+                    </td>
+                </tr>
+                <tr>
+                    <td class="centeredCell" colspan="6">
+                        <hr>Аттрибуты
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="centeredCell" colspan="2">Физические</td>
+                    <td class="centeredCell" colspan="2">Социальные</td>
+                    <td class="centeredCell" colspan="2">Ментайные</td>
+                </tr>
+                <tr>
+                    <td>Сила</td>
+                    <td class="fromRight">
+                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">                            
+                        </div>
+                    </td>
+                    <td>Обаяние</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint" onclick="clickHandling(this)">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Восприятие</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ловкость</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Манипуляция</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Интеллект</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Выносливость</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Внешность</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Смекалка</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="centeredCell" colspan="6">
+                        <hr>Способности
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="centeredCell" colspan="2">Таланты</td>
+                    <td class="centeredCell" colspan="2">Навыки</td>
+                    <td class="centeredCell" colspan="2">Познания</td>
+                </tr>
+                <tr>
+                    <td>Атлетика</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Безопасность</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Академические</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Внимательность</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Вождение</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Законы</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Запугивание</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Выживание</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Компьютеры</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Знание улиц</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Исполнение</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Лингвистика</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Лидерство</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Знание животных</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Медицина</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Рукопашный бой</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Ремесла</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Научные</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Уклонение</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Скрытность</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Оккультизм</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Хитрость</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Стрельба</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Политика</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Экспрессия</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Фехтование</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Расследование</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Эмпатия</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Этикет</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                    <td>Финансы</td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="centeredCell" colspan="6">
+                        <hr>Преимущества
+                        <hr>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="centeredCell" colspan="2">Дополнения</td>
+                    <td class="centeredCell" colspan="2">Дисциплины</td>
+                    <td class="centeredCell" colspan="2">Добродетели</td>
+                </tr>
+                <tr>
+                    <td class="centeredCell">
+                        <select id="">
+                            <option selected value>Пусто</option>
+                            <option disabled value>Достоинства</option>
+                            <option disabled value>&nbsp;Физические</option>
+                            <option>&nbsp;&nbsp;Обострённые чувства (-1 pt)</option>
+                            <option>&nbsp;&nbsp;Амибекстер (-1 pt)</option>
+                            <option>&nbsp;&nbsp;Внушительный тип (-1 pt)</option>
+                            <option>&nbsp;&nbsp;Кошачье равновесие (-1 pt)</option>
+                            <option>&nbsp;&nbsp;Жаворонок (-1 pt)</option>
+                            <option>&nbsp;&nbsp;Поглощение пищи (-1 pt)</option>
+                            <option>&nbsp;&nbsp;Знакомое лицо (-1 pt)</option>
+                            <option>&nbsp;&nbsp;Пышущий здоровьем (-2 pt)</option>
+                            <option>&nbsp;&nbsp;Чарующий голос (-2 pt)</option>
+                            <option>&nbsp;&nbsp;Сорвиголова (-3 pt)</option>
+                            <option>&nbsp;&nbsp;Эффективное усвоение (-3 pt)</option>
+                            <option>&nbsp;&nbsp;Огромный размер (-4 pt)</option>
+                        </select>
+                    </td>
+                    <td class="fromRight">
+                        <div style="display: inline-block;">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                            <img src="images/EmptyPoint.png" alt="EmptyPoint">
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
 </html>
