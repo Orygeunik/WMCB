@@ -1,9 +1,25 @@
 /*jshint esversion: 6 */
 
+function isFillPoint(imgElement) {
+    "use strict";
+
+    return (imgElement.src.indexOf("images/FillPoint.png") !== -1);
+}
+
+function isEmptyPoint(imgElement) {
+    "use strict";
+
+    return (imgElement.src.indexOf("images/EmptyPoint.png") !== -1);
+}
+
 function setEmptyPoint(imgElement) {
     "use strict";
 
-    if (!imgElement) {
+    if (!imgElement || imgElement.tagName !== "IMG") {
+        return;
+    }
+
+    if (isEmptyPoint(imgElement)) {
         return;
     }
 
@@ -14,7 +30,11 @@ function setEmptyPoint(imgElement) {
 function setFillPoint(imgElement) {
     "use strict";
 
-    if (!imgElement) {
+    if (!imgElement || imgElement.tagName !== "IMG") {
+        return;
+    }
+
+    if (isFillPoint(imgElement)) {
         return;
     }
 
@@ -25,28 +45,26 @@ function setFillPoint(imgElement) {
 function changePointState(imgElement) {
     "use strict";
 
-    if (!imgElement) {
+    if (!imgElement || imgElement.tagName !== "IMG") {
         return;
     }
 
-    if (imgElement.src.indexOf("images/FillPoint.png") !== -1) {
+    if (isFillPoint(imgElement)) {
         setEmptyPoint(imgElement);
-    } else if (imgElement.src.indexOf("images/EmptyPoint.png") !== -1) {
+    } else if (isEmptyPoint(imgElement)) {
         setFillPoint(imgElement);
     }
 
 }
 
-function getSidePoints(imgElement) {
+function changeSidePoints(parentElement, clickedElement) {
     "use strict";
 
-    if (!imgElement) {
+    if (!parentElement) {
         return;
     }
 
-    let parentElement = imgElement.parentElement;
-
-    if (!parentElement) {
+    if (!clickedElement) {
         return;
     }
 
@@ -56,10 +74,29 @@ function getSidePoints(imgElement) {
         return;
     }
 
+    var clickedElementIndex = -1;
+
     for (let index = 0; index < listOfChild.length; index++) {
-        console.log(listOfChild[index]);
+        if (listOfChild[index] === clickedElement) {
+            clickedElementIndex = index;
+        }
     }
 
+    if (clickedElementIndex === -1) {
+        return;
+    }
+
+    changePointState(listOfChild[clickedElementIndex]);
+
+    for (let index = 0; index < listOfChild.length; index++) {
+        if (index < clickedElementIndex) {
+            setFillPoint(listOfChild[index]);
+        } else if (index === clickedElementIndex) {
+            continue;
+        } else {
+            setEmptyPoint(listOfChild[index]);
+        }
+    }
 }
 
 function clickHandling(targetElement) {
@@ -69,9 +106,15 @@ function clickHandling(targetElement) {
         return;
     }
 
-    if (targetElement.tagName === "IMG") {
-        getSidePoints(targetElement);
-        changePointState(targetElement);
+    if (targetElement.tagName === "DIV") {
+
+        const clickedElement = document.elementFromPoint(event.clientX, event.clientY);
+
+        if (clickedElement.tagName !== "IMG") {
+            return;
+        }
+
+        changeSidePoints(targetElement, clickedElement);
     }
 
 }
