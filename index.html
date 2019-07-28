@@ -18,14 +18,14 @@
                 <tr>
                     <td>Имя</td>
                     <td>
-                        <input type="text" id="characterName" size="30" />
+                        <input type="text" id="characterName" />
                     </td>
                     <td>Натура</td>
                     <td>
-                        <input type="text" id="characterNature" size="30" />
+                        <input type="text" id="characterNature" />
                     </td>
                     <td>Поколение</td>
-                    <td class="centeredCell">
+                    <td class="centered">
                         <select id="characterGenerationList">
                             <option value="3">III</option>
                             <option value="4">IV</option>
@@ -46,24 +46,24 @@
                 <tr>
                     <td>Игрок</td>
                     <td>
-                        <input type="text" id="characterUser" size="30" />
+                        <input type="text" id="characterUser" />
                     </td>
                     <td>Маска</td>
                     <td>
-                        <input type="text" id="characterMask" size="30" />
+                        <input type="text" id="characterMask" />
                     </td>
                     <td>Убежище</td>
                     <td>
-                        <input type="text" id="characterShelter" size="30" />
+                        <input type="text" id="characterShelter" />
                     </td>
                 </tr>
                 <tr>
                     <td>Хроника</td>
                     <td>
-                        <input type="text" id="characterStory" size="30" />
+                        <input type="text" id="characterStory" />
                     </td>
                     <td>Клан</td>
-                    <td class="centeredCell">
+                    <td class="centered">
                         <select id="characterClan" required>
                             <option disabled selected value> -- Выберите клан -- </option>
                             <option disabled>Камарилья</option>
@@ -118,20 +118,22 @@
                     </td>
                     <td>Концепт</td>
                     <td>
-                        <input type="text" id="characterConcept" size="30" />
+                        <input type="text" id="characterConcept" />
                     </td>
                 </tr>
+            </table>
+            <div class="centered">
+                <hr>Аттрибуты
+                <hr>
+            </div>
+            <table class="basicInfoTable">
                 <tr>
-                    <td class="centeredCell" colspan="6">
-                        <hr>Аттрибуты
-                        <hr>
-                    </td>
+                    <td class="centered">Физические</td>
+                    <td class="centered">Социальные</td>
+                    <td class="centered">Ментайные</td>
                 </tr>
-                <tr>
-                    <td class="centeredCell" colspan="2">Физические</td>
-                    <td class="centeredCell" colspan="2">Социальные</td>
-                    <td class="centeredCell" colspan="2">Ментайные</td>
-                </tr>
+            </table>
+            <table class="basicInfoTable">
                 <tr>
                     <td>Сила</td>
                     <td class="fromRight">
@@ -183,17 +185,19 @@
                         </div>
                     </td>
                 </tr>
+            </table>
+            <div class="centered">
+                <hr>Способности
+                <hr>
+            </div>
+            <table class="basicInfoTable">
                 <tr>
-                    <td class="centeredCell" colspan="6">
-                        <hr>Способности
-                        <hr>
-                    </td>
+                    <td class="centered">Таланты</td>
+                    <td class="centered">Навыки</td>
+                    <td class="centered">Познания</td>
                 </tr>
-                <tr>
-                    <td class="centeredCell" colspan="2">Таланты</td>
-                    <td class="centeredCell" colspan="2">Навыки</td>
-                    <td class="centeredCell" colspan="2">Познания</td>
-                </tr>
+            </table>
+            <table class="basicInfoTable">
                 <tr>
                     <td>Атлетика</td>
                     <td class="fromRight">
@@ -364,20 +368,22 @@
                         </div>
                     </td>
                 </tr>
+            </table>
+            <div class="centered">
+                <hr>Преимущества
+                <hr>
+            </div>
+            <table class="basicInfoTable">
                 <tr>
-                    <td class="centeredCell" colspan="6">
-                        <hr>Преимущества
-                        <hr>
-                    </td>
+                    <td class="centered">Дополнения</td>
+                    <td class="centered">Дисциплины</td>
+                    <td class="centered">Добродетели</td>
                 </tr>
+            </table>
+            <table class="basicInfoTable">
                 <tr>
-                    <td class="centeredCell" colspan="2">Дополнения</td>
-                    <td class="centeredCell" colspan="2">Дисциплины</td>
-                    <td class="centeredCell" colspan="2">Добродетели</td>
-                </tr>
-                <tr>
-                    <td class="centeredCell">
-                        <select id="">
+                    <td class="centered">
+                        <select id="AdvantagesDisadvantages">
                             <option selected value>Пусто</option>
                             <option disabled value>Достоинства</option>
                             <option disabled value>&nbsp;Физические</option>
