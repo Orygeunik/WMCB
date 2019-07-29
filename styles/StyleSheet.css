@@ -16,8 +16,18 @@ html {
     width: 100%;
 }
 
+.basicInfoTable td {
+    padding: 2px;
+}
+
 .basicInfoTable td input[type="text"] {
-    width: 14em;
+    /*width: 14em;*/
+    display: table-cell;
+    width: 100%;
+}
+
+.bordered {
+    border-bottom: 1px solid #000;
 }
 
 .centered {
@@ -25,7 +35,32 @@ html {
 }
 
 .fromRight {
-    text-align: right;
+    float: right;
+}
+
+.inlineBlock {
+    display: inline-block;
+}
+
+.inlineBlock img {
+    float: left;
+    height: 15px;
+    padding: 0 1px;    
+}
+
+.inlineBlock input[type="checkbox"] {
+    height: 15px;
+    margin: 0;    
+}
+
+.oneThird {
+    width: 33%;
+}
+
+.optionSelect {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
 }
 
 .pointContainer {
@@ -33,6 +68,6 @@ html {
 }
 
 .pointContainer img {
-    height: 16px;
+    height: 15px;
     padding: 0 1px;
 }

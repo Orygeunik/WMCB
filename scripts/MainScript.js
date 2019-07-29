@@ -140,10 +140,38 @@ function addImages(rootElement, elementCount) {
 
 }
 
+function addOptions(element, optionArray) {
+    "use strict";
+
+    if (!element || element.tagName !== "SELECT") {
+        return;
+    }
+
+    if (!optionArray || !Array.isArray(optionArray)) {
+        return;
+    }
+
+    for (let i = 0; i < optionArray.length; i++) {
+        const opt = optionArray[i];
+        let el = document.createElement("option");
+        el.textContent = opt.text;
+        el.disabled = opt.disabled;
+        el.selected = opt.selected;
+        element.appendChild(el);
+    }
+}
+
 function tuningDocument() {
     let divs = document.getElementsByClassName("pointContainer");
 
     for (let index = 0; index < divs.length; index++) {
         addImages(divs[index], divs[index].dataset.elementCount);
     }
+
+    let selectsAdvantagesDisadvantages = document.getElementsByClassName("optionSelect");
+    for (let index = 0; index < selectsAdvantagesDisadvantages.length; index++) {
+        addOptions(selectsAdvantagesDisadvantages[index], advantagesDisadvantagesOptions);
+    }
+
+
 }
