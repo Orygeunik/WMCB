@@ -157,6 +157,9 @@ function addOptions(element, optionArray) {
         el.textContent = opt.text;
         el.disabled = opt.disabled;
         el.selected = opt.selected;
+        if (opt.value) {
+            el.value = opt.value;
+        }
         element.appendChild(el);
     }
 }
@@ -173,5 +176,6 @@ function tuningDocument() {
         addOptions(selectsAdvantagesDisadvantages[index], advantagesDisadvantagesOptions);
     }
 
-
+    let characterSelector = document.getElementById("characterClan");
+    addOptions(characterSelector, characterClansOptions);
 }
