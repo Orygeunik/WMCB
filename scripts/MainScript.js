@@ -151,6 +151,10 @@ function addOptions(element, optionArray) {
         return;
     }
 
+    for (let i = element.options.length - 1; i >= 0; i--) {
+        element.remove(i);
+    }
+
     for (let i = 0; i < optionArray.length; i++) {
         const opt = optionArray[i];
         let el = document.createElement("option");
@@ -182,5 +186,10 @@ function tuningDocument() {
     let selectsAdditions = document.getElementsByClassName("additionsOptionSelect");
     for (let index = 0; index < selectsAdditions.length; index++) {
         addOptions(selectsAdditions[index], additionsOptions);
+    }
+
+    let selectsDisciplines = document.getElementsByClassName("disciplinesOptionSelect");
+    for (let index = 0; index < selectsDisciplines.length; index++) {
+        addOptions(selectsDisciplines[index], disciplinesOptions);
     }
 }

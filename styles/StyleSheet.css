@@ -69,6 +69,12 @@ html {
     box-shadow: none;
 }
 
+.disciplinesOptionSelect {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
 .pointContainer {
     display: inline-block;
 }
