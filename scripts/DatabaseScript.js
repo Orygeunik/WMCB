@@ -228,3 +228,18 @@ const characterClansOptions = [
     { "value": "Samedi", "text": "\u00A0Самеди", "disabled": false, "selected": false },
     { "value": "OldClanTzimisce", "text": "\u00A0Старый клан Цимисхи", "disabled": false, "selected": false }
 ];
+
+const additionsOptions = [
+    { "value": "Empty", "text": "Пусто", "disabled": false, "selected": true },
+    { "value": "Allies", "text": "Союзники", "disabled": false, "selected": false },
+    { "value": "Communication", "text": "Связи", "disabled": false, "selected": false },
+    { "value": "Glory", "text": "Слава", "disabled": false, "selected": false },
+    { "value": "Generation", "text": "Поколение", "disabled": false, "selected": false },
+    { "value": "Cattle", "text": "Стадо", "disabled": false, "selected": false },
+    { "value": "Influence", "text": "Влияние", "disabled": false, "selected": false },
+    { "value": "Mentor", "text": "Ментор", "disabled": false, "selected": false },
+    { "value": "Resources", "text": "Ресурсы", "disabled": false, "selected": false },
+    { "value": "Servants", "text": "Слуги", "disabled": false, "selected": false },
+    { "value": "Standing", "text": "Статус", "disabled": false, "selected": false }
+];
+

@@ -45,19 +45,25 @@ html {
 .inlineBlock img {
     float: left;
     height: 15px;
-    padding: 0 1px;    
+    padding: 0 1px;
 }
 
 .inlineBlock input[type="checkbox"] {
     height: 15px;
-    margin: 0;    
+    margin: 0;
 }
 
 .oneThird {
     width: 33%;
 }
 
-.optionSelect {
+.additionsOptionSelect {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.advantagesDisadvantagesOptionSelect {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;

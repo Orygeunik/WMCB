@@ -171,11 +171,16 @@ function tuningDocument() {
         addImages(divs[index], divs[index].dataset.elementCount);
     }
 
-    let selectsAdvantagesDisadvantages = document.getElementsByClassName("optionSelect");
+    let selectsAdvantagesDisadvantages = document.getElementsByClassName("advantagesDisadvantagesOptionSelect");
     for (let index = 0; index < selectsAdvantagesDisadvantages.length; index++) {
         addOptions(selectsAdvantagesDisadvantages[index], advantagesDisadvantagesOptions);
     }
 
     let characterSelector = document.getElementById("characterClan");
     addOptions(characterSelector, characterClansOptions);
+
+    let selectsAdditions = document.getElementsByClassName("additionsOptionSelect");
+    for (let index = 0; index < selectsAdditions.length; index++) {
+        addOptions(selectsAdditions[index], additionsOptions);
+    }
 }
