@@ -151,9 +151,8 @@ function addOptions(element, optionArray) {
         return;
     }
 
-    for (let i = element.options.length - 1; i >= 0; i--) {
-        element.remove(i);
-    }
+    element.options.length = 0;
+
 
     for (let i = 0; i < optionArray.length; i++) {
         const opt = optionArray[i];
