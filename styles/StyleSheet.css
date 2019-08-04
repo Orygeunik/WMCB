@@ -10,8 +10,6 @@ html {
     font-size: 14px;
 }
 
-input[type="checkbox"] {
-    pointer-events: none;
 }
 
 .basicInfoTable {
@@ -77,6 +75,29 @@ input[type="checkbox"] {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;
+}
+
+.disabledCheckbox {
+    pointer-events: none;
+}
+
+.pointCheckbox {
+    display: none;
+}
+
+.pointCheckbox+label {
+    background-image: url("../images/EmptyPoint.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    height: 15px;
+    margin: 0 1px;
+    width: 15px;
+}
+
+.pointCheckbox:checked+label {
+    background-image: url("../images/FillPoint.png");
 }
 
 .pointContainer {
