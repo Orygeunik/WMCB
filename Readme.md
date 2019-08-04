@@ -5,14 +5,14 @@
 
 ---
 
-###Русский
+### Русский
 
-####Общее описание
+#### Общее описание
 
 Проект представляет из себя помощник в создании персонажа для роли-плей игры Вампиры: Маскарад (Vampire: the Masquerade). Помощник, на текущий момент не интерактивный (в дальнейшем планируется добавить интерактивность). После распределения очков и выбора необходимых характеристик достаточно "распечатать страницу" (в браузере выбрать Crtl + P), страница будет собрана согласно классическому листу персонажа игры.
 P.S. Основное назначение помощника помочь при создании персонажа для друзей и себя :-)
 
-#####Техническое описание
+##### Техническое описание
 
 Планируется использовать (считать как некий вызов):
 1. HTML5;
@@ -30,14 +30,14 @@ P.S. Основное назначение помощника помочь пр�
 	* https://jshint.com
 	* https://codebeautify.org/jsvalidate
 
-###English
+### English
 
-####General description
+#### General description
 
 This project presents assistant to create characters for role-play game Vampire: the Masquerade. At this moment, assistant is not interactive (there are plans to add interactivity to this project). After points were distributed and needed characteristics selected just print resulted page (in your browser press Ctrl (or Command) + P), that page will be formed according to character blank from original game.
 P.S. Main purpose of the project is to give a help to build characters for my friends and me :-)
 
-#####Tech overview
+##### Tech overview
 
 Technologies planned to use (consider it as a challenge):
 1. HTML5;
