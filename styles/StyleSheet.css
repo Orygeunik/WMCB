@@ -10,8 +10,8 @@ html {
     font-size: 14px;
 }
 
-input[type="checkbox"]{
-	pointer-events: none;
+input[type="checkbox"] {
+    pointer-events: none;
 }
 
 .basicInfoTable {
