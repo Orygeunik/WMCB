@@ -1,7 +1,6 @@
-### Language version
-
-* [Русская](#Русский) версия файла
-* [English's](#English) version file
+### Readme language preferences
+* [Русская версия файла](#Русский)
+* [English file version](#English)
 
 ---
 
