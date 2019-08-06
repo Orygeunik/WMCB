@@ -1,58 +1,45 @@
 /*jshint esversion: 6 */
+var runtimeCheckboxIDCounter = 0;
 
-function isFillPoint(imgElement) {
+function setEmptyPoint(inputElement) {
     "use strict";
 
-    return (imgElement.src.indexOf("images/FillPoint.png") !== -1);
+    if (!inputElement || (inputElement.tagName !== "INPUT" && inputElement.type === "checkbox")) {
+        return;
+    }
+
+    if (!inputElement.checked) {
+        return;
+    }
+
+    inputElement.checked = false;
 }
 
-function isEmptyPoint(imgElement) {
+function setFillPoint(inputElement) {
     "use strict";
 
-    return (imgElement.src.indexOf("images/EmptyPoint.png") !== -1);
+    if (!inputElement || (inputElement.tagName !== "INPUT" && inputElement.type === "checkbox")) {
+        return;
+    }
+
+    if (inputElement.checked) {
+        return;
+    }
+
+    inputElement.checked = true;
 }
 
-function setEmptyPoint(imgElement) {
+function changePointState(inputElement) {
     "use strict";
 
-    if (!imgElement || imgElement.tagName !== "IMG") {
+    if (!inputElement || (inputElement.tagName !== "INPUT" && inputElement.type === "checkbox")) {
         return;
     }
 
-    if (isEmptyPoint(imgElement)) {
-        return;
-    }
-
-    imgElement.src = "images/EmptyPoint.png";
-    imgElement.alt = "EmptyPoint";
-}
-
-function setFillPoint(imgElement) {
-    "use strict";
-
-    if (!imgElement || imgElement.tagName !== "IMG") {
-        return;
-    }
-
-    if (isFillPoint(imgElement)) {
-        return;
-    }
-
-    imgElement.src = "images/FillPoint.png";
-    imgElement.alt = "FillPoint";
-}
-
-function changePointState(imgElement) {
-    "use strict";
-
-    if (!imgElement || imgElement.tagName !== "IMG") {
-        return;
-    }
-
-    if (isFillPoint(imgElement)) {
-        setEmptyPoint(imgElement);
-    } else if (isEmptyPoint(imgElement)) {
-        setFillPoint(imgElement);
+    if (inputElement.checked) {
+        inputElement.checked = false;
+    } else if (!inputElement.checked) {
+        inputElement.checked = true;
     }
 
 }
@@ -68,7 +55,7 @@ function changeSidePoints(parentElement, clickedElement) {
         return;
     }
 
-    let listOfChild = parentElement.getElementsByTagName("IMG");
+    let listOfChild = parentElement.getElementsByTagName("INPUT");
 
     if (!listOfChild || listOfChild.length === 0) {
         return;
@@ -77,8 +64,9 @@ function changeSidePoints(parentElement, clickedElement) {
     var clickedElementIndex = -1;
 
     for (let index = 0; index < listOfChild.length; index++) {
-        if (listOfChild[index] === clickedElement) {
+        if (listOfChild[index].id === clickedElement.htmlFor) {
             clickedElementIndex = index;
+            break;
         }
     }
 
@@ -110,7 +98,7 @@ function clickHandling(targetElement) {
 
         const clickedElement = document.elementFromPoint(event.clientX, event.clientY);
 
-        if (clickedElement.tagName !== "IMG") {
+        if (clickedElement.tagName !== "LABEL") {
             return;
         }
 
@@ -119,7 +107,7 @@ function clickHandling(targetElement) {
 
 }
 
-function addImages(rootElement, elementCount) {
+function addInputPoints(rootElement, elementCount) {
     "use strict";
 
     if (!rootElement || rootElement.tagName !== "DIV") {
@@ -133,9 +121,18 @@ function addImages(rootElement, elementCount) {
     const intElementCount = TryParseInt(elementCount, 0);
 
     for (let i = 0; i < intElementCount; i++) {
-        let element = document.createElement("IMG");
-        setEmptyPoint(element);
+        let element = document.createElement("input");
+        element.type = "checkbox";
+        element.id = "runtimeCheckboxID_" + runtimeCheckboxIDCounter;
+        element.classList.add("pointCheckbox");
+
+        let label = document.createElement("label");
+        label.htmlFor = "runtimeCheckboxID_" + runtimeCheckboxIDCounter;
+
         rootElement.appendChild(element);
+        rootElement.appendChild(label);
+
+        runtimeCheckboxIDCounter++;
     }
 
 }
@@ -171,7 +168,7 @@ function tuningDocument() {
     let divs = document.getElementsByClassName("pointContainer");
 
     for (let index = 0; index < divs.length; index++) {
-        addImages(divs[index], divs[index].dataset.elementCount);
+        addInputPoints(divs[index], divs[index].dataset.elementCount);
     }
 
     let selectsAdvantagesDisadvantages = document.getElementsByClassName("advantagesDisadvantagesOptionSelect");
