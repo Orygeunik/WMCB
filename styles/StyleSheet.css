@@ -10,6 +10,53 @@ html {
     font-size: 14px;
 }
 
+@media screen and (max-width: 790px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        text-align: right;
+        margin: 1em 0;
+    }
+
+    table td::before {
+        content: attr(data-name);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    .hideIfScreenNarrow {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 790px) {
+    .centered {
+        text-align: center;
+    }
+
+    .fromRight {
+        float: right;
+    }
 }
 
 .basicInfoTable {
@@ -30,14 +77,6 @@ html {
 
 .bordered {
     border-bottom: 1px solid #000;
-}
-
-.centered {
-    text-align: center;
-}
-
-.fromRight {
-    float: right;
 }
 
 .inlineBlock {
