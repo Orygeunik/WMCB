@@ -18,16 +18,16 @@
             <table class="basicInfoTable">
                 <caption>Листок персонажа вампира</caption>
                 <tr>
-                    <td>Имя</td>
-                    <td>
+                    <td class="hideIfScreenNarrow">Имя</td>
+                    <td data-name="Имя">
                         <input type="text" id="characterName" />
                     </td>
-                    <td>Натура</td>
-                    <td>
+                    <td class="hideIfScreenNarrow">Натура</td>
+                    <td data-name="Натура">
                         <input type="text" id="characterNature" />
                     </td>
-                    <td>Поколение</td>
-                    <td class="centered">
+                    <td class="hideIfScreenNarrow">Поколение</td>
+                    <td data-name="Поколение" class="centered">
                         <select id="characterGenerationList">
                             <option value="3">III</option>
                             <option value="4">IV</option>
@@ -46,288 +46,362 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>Игрок</td>
-                    <td>
+                    <td class="hideIfScreenNarrow">Игрок</td>
+                    <td data-name="Игрок">
                         <input type="text" id="characterUser" />
                     </td>
-                    <td>Маска</td>
-                    <td>
+                    <td class="hideIfScreenNarrow">Маска</td>
+                    <td data-name="Маска">
                         <input type="text" id="characterMask" />
                     </td>
-                    <td>Убежище</td>
-                    <td>
+                    <td class="hideIfScreenNarrow">Убежище</td>
+                    <td data-name="Убежище">
                         <input type="text" id="characterShelter" />
                     </td>
                 </tr>
                 <tr>
-                    <td>Хроника</td>
-                    <td>
+                    <td class="hideIfScreenNarrow">Хроника</td>
+                    <td data-name="Хроника">
                         <input type="text" id="characterStory" />
                     </td>
-                    <td>Клан</td>
-                    <td class="centered">
+                    <td class="hideIfScreenNarrow">Клан</td>
+                    <td data-name="Клан" class="centered">
                         <select id="characterClan" required>
                             <option value>Empty</option>
                         </select>
                     </td>
-                    <td>Концепт</td>
-                    <td>
+                    <td class="hideIfScreenNarrow">Концепт</td>
+                    <td data-name="Концепт">
                         <input type="text" id="characterConcept" />
                     </td>
                 </tr>
             </table>
+            <div class="customHeader">
+                <hr>Атрибуты
+                <hr>
+            </div>
             <table class="basicInfoTable">
                 <tr>
-                    <th colspan="6">
-                        <hr>Атрибуты
-                        <hr>
-                    </th>
+                    <th>Физические</th>
+                    <th>Социальные</th>
+                    <th>Ментайные</th>
                 </tr>
                 <tr>
-                    <th colspan="2">Физические</th>
-                    <th colspan="2">Социальные</th>
-                    <th colspan="2">Ментайные</th>
-                </tr>
-                <tr>
-                    <td>Сила</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                    <td data-name="Физические">
+                        <div class="flowRoot">
+                            <div>Сила</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
                         </div>
                     </td>
-                    <td>Обаяние</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                    <td data-name="Социальные">
+                        <div class="flowRoot">
+                            <div>Обаяние</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
                         </div>
                     </td>
-                    <td>Восприятие</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Ловкость</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Манипуляция</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Интеллект</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                    <td data-name="Ментайные">
+                        <div class="flowRoot">
+                            <div>Восприятие</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>Выносливость</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                    <td data-name="Физические">
+                        <div class="flowRoot">
+                            <div>Ловкость</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
                         </div>
                     </td>
-                    <td>Внешность</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                    <td data-name="Социальные">
+                        <div class="flowRoot">
+                            <div>Манипуляция</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
                         </div>
                     </td>
-                    <td>Смекалка</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th colspan="6">
-                        <hr>Способности
-                        <hr>
-                    </th>
-                </tr>
-                <tr>
-                    <th colspan="2">Таланты</th>
-                    <th colspan="2">Навыки</th>
-                    <th colspan="2">Познания</th>
-                </tr>
-                <tr>
-                    <td>Атлетика</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Безопасность</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Академические</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                    <td data-name="Ментайные">
+                        <div class="flowRoot">
+                            <div>Интеллект</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td>Внимательность</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                    <td data-name="Физические">
+                        <div class="flowRoot">
+                            <div>Выносливость</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
                         </div>
                     </td>
-                    <td>Вождение</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                    <td data-name="Социальные">
+                        <div class="flowRoot">
+                            <div>Внешность</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
                         </div>
                     </td>
-                    <td>Законы</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Запугивание</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Выживание</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Компьютеры</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Знание улиц</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Исполнение</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Лингвистика</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Лидерство</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Знание животных</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Медицина</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Рукопашный бой</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Ремесла</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Научные</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Уклонение</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Скрытность</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Оккультизм</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Хитрость</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Стрельба</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Политика</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Экспрессия</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Фехтование</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Расследование</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Эмпатия</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Этикет</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
-                        </div>
-                    </td>
-                    <td>Финансы</td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                    <td data-name="Ментайные">
+                        <div class="flowRoot">
+                            <div>Смекалка</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
                         </div>
                     </td>
                 </tr>
             </table>
+            <div class="customHeader">
+                <hr>Способности
+                <hr>
+            </div>
             <table class="basicInfoTable">
                 <tr>
-                    <th colspan="5">
-                        <hr>Преимущества
-                        <hr>
-                    </th>
+                    <th>Таланты</th>
+                    <th>Навыки</th>
+                    <th>Познания</th>
                 </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Атлетика</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Безопасность</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Академические</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Внимательность</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Вождение</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Законы</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Запугивание</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Выживание</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Компьютеры</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Знание улиц</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Исполнение</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Лингвистика</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Лидерство</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Знание животных</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Медицина</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Рукопашный бой</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Ремесла</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Научные</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Уклонение</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Скрытность</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Оккультизм</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Хитрость</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Стрельба</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Политика</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Экспрессия</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Фехтование</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Расследование</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Таланты">
+                        <div class="flowRoot">
+                            <div>Эмпатия</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Навыки">
+                        <div class="flowRoot">
+                            <div>Этикет</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Познания">
+                        <div class="flowRoot">
+                            <div>Финансы</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <div class="customHeader">
+                <hr>Преимущества
+                <hr>
+            </div>
+            <table class="basicInfoTable">
                 <tr>
                     <th colspan="2">Дополнения</th>
                     <th colspan="2">Дисциплины</th>
