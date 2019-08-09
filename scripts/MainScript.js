@@ -1,9 +1,10 @@
 /*jshint esversion: 6 */
+/*jshint node: true */
+"use strict";
 var runtimeCheckboxIDCounter = 0;
 
 function setEmptyPoint(inputElement) {
-    "use strict";
-
+  
     if (!inputElement || (inputElement.tagName !== "INPUT" && inputElement.type === "checkbox")) {
         return;
     }
@@ -16,7 +17,6 @@ function setEmptyPoint(inputElement) {
 }
 
 function setFillPoint(inputElement) {
-    "use strict";
 
     if (!inputElement || (inputElement.tagName !== "INPUT" && inputElement.type === "checkbox")) {
         return;
@@ -30,7 +30,6 @@ function setFillPoint(inputElement) {
 }
 
 function changePointState(inputElement) {
-    "use strict";
 
     if (!inputElement || (inputElement.tagName !== "INPUT" && inputElement.type === "checkbox")) {
         return;
@@ -45,7 +44,6 @@ function changePointState(inputElement) {
 }
 
 function changeSidePoints(parentElement, clickedElement) {
-    "use strict";
 
     if (!parentElement) {
         return;
@@ -88,7 +86,6 @@ function changeSidePoints(parentElement, clickedElement) {
 }
 
 function clickHandling(targetElement) {
-    "use strict";
 
     if (!targetElement) {
         return;
@@ -108,7 +105,6 @@ function clickHandling(targetElement) {
 }
 
 function addInputPoints(rootElement, elementCount) {
-    "use strict";
 
     if (!rootElement || rootElement.tagName !== "DIV") {
         return;
@@ -138,7 +134,6 @@ function addInputPoints(rootElement, elementCount) {
 }
 
 function addOptions(element, optionArray) {
-    "use strict";
 
     if (!element || element.tagName !== "SELECT") {
         return;
