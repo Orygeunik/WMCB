@@ -1,4 +1,6 @@
 /*jshint esversion: 6 */
+/*jshint node: true */
+"use strict";
 
 const advantagesDisadvantagesOptions = [
     { "text": "", "disabled": false, "selected": true },
