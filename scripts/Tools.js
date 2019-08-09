@@ -1,7 +1,8 @@
 /*jshint esversion: 6 */
+/*jshint node: true */
+"use strict";
 
 function TryParseInt(str, defaultValue) {
-    "use strict";
 
     let retValue = defaultValue;
     if (str !== null) {
