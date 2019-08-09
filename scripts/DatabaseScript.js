@@ -3,7 +3,7 @@
 "use strict";
 
 const advantagesDisadvantagesOptions = [
-    { "text": "", "disabled": false, "selected": true },
+    { "value": "Empty", "text": "Пусто", "disabled": false, "selected": true },
     { "text": "Достоинства", "disabled": true, "selected": false },
     { "text": "\u00A0Физические", "disabled": true, "selected": false },
     { "text": "\u00A0\u00A0Обострённые чувства (-1 pt)", "disabled": false, "selected": false },
@@ -232,7 +232,7 @@ const characterClansOptions = [
 ];
 
 const additionsOptions = [
-    { "value": "Empty", "text": "", "disabled": false, "selected": true },
+    { "value": "Empty", "text": "Пусто", "disabled": false, "selected": true },
     { "value": "Allies", "text": "Союзники", "disabled": false, "selected": false },
     { "value": "Communication", "text": "Связи", "disabled": false, "selected": false },
     { "value": "Glory", "text": "Слава", "disabled": false, "selected": false },
@@ -246,7 +246,7 @@ const additionsOptions = [
 ];
 
 const disciplinesOptions = [
-    { "value": "Empty", "text": "", "disabled": false, "selected": true },
+    { "value": "Empty", "text": "Пусто", "disabled": false, "selected": true },
     { "value": "Animalism", "text": "Анимализм", "disabled": false, "selected": false },
     { "value": "Bardo", "text": "Бардо", "disabled": false, "selected": false },
     { "value": "Valeren", "text": "Валерен", "disabled": false, "selected": false },
