@@ -12,11 +12,11 @@
     <script async defer src="scripts/DatabaseScript.js"></script>
     <script async defer src="scripts/Print/PrintScript.js"></script>
     <script async defer src="scripts/Print/PrepressScript.js"></script>
-    <script async defer src="scripts/Print/PostpressScript.js"></script>    
+    <script async defer src="scripts/Print/PostpressScript.js"></script>
 </head>
 
 <body onload="tuningDocument(); printSetup();">
-    <div style="overflow-x:auto;">
+    <div>
         <form>
             <table class="basicInfoTable">
                 <caption>Листок персонажа вампира</caption>
@@ -406,173 +406,179 @@
             </div>
             <table class="basicInfoTable">
                 <tr>
-                    <th colspan="2">Дополнения</th>
-                    <th colspan="2">Дисциплины</th>
+                    <th class="percent30">Дополнения</th>
+                    <th class="percent50">Дисциплины</th>
                     <th>Добродетели</th>
                 </tr>
                 <tr>
-                    <td class="centered">
-                        <select class="additionsOptionSelect" id="additions_0">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td data-name="Дополнения">
+                        <div class="flowRoot">
+                            <div><select class="additionsOptionSelect" id="additions_0">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
-                    <td class="centered">
-                        <select class="disciplinesOptionSelect" id="discipline_0">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td data-name="Дисциплины">
+                        <div class="flowRoot">
+                            <div><select class="disciplinesOptionSelect" id="discipline_0">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td class="centered">
-                        <select class="additionsOptionSelect" id="additions_1">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td data-name="Дополнения">
+                        <div class="flowRoot">
+                            <div><select class="additionsOptionSelect" id="additions_1">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
-                    <td class="centered">
-                        <select class="disciplinesOptionSelect" id="discipline_1">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td data-name="Дисциплины">
+                        <div class="flowRoot">
+                            <div><select class="disciplinesOptionSelect" id="discipline_1">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
-                    <td class="centered">Сознательность/Убежденность</td>
-                </tr>
-                <tr>
-                    <td class="centered">
-                        <select class="additionsOptionSelect" id="additions_2">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
-                        </div>
-                    </td>
-                    <td class="centered">
-                        <select class="disciplinesOptionSelect" id="discipline_2">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
-                        </div>
-                    </td>
-                    <td class="centered">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td rowspan="2" data-name="Добродетели">
+                        <div class="flowRoot overrideFlowRoot">
+                            <div>Сознательность/Убежденность</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
-                        <select class="additionsOptionSelect" id="additions_3">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td data-name="Дополнения">
+                        <div class="flowRoot">
+                            <div><select class="additionsOptionSelect" id="additions_2">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
-                    <td class="centered">
-                        <select class="disciplinesOptionSelect" id="discipline_3">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
-                        </div>
-                    </td>
-                    <td class="centered">Самоконтроль/Инстинкты</td>
-                </tr>
-                <tr>
-                    <td class="centered">
-                        <select class="additionsOptionSelect" id="additions_4">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
-                        </div>
-                    </td>
-                    <td class="centered">
-                        <select class="disciplinesOptionSelect" id="disciplines_4">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
-                        </div>
-                    </td>
-                    <td class="centered">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td data-name="Дисциплины">
+                        <div class="flowRoot">
+                            <div><select class="disciplinesOptionSelect" id="discipline_2">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
-                        <select class="additionsOptionSelect" id="additions_5">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td data-name="Дополнения">
+                        <div class="flowRoot">
+                            <div><select class="additionsOptionSelect" id="additions_3">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
-                    <td class="centered">
-                        <select class="disciplinesOptionSelect" id="discipline_5">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td data-name="Дисциплины">
+                        <div class="flowRoot">
+                            <div><select class="disciplinesOptionSelect" id="discipline_3">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
-                    <td class="centered">Смелость</td>
-                </tr>
-                <tr>
-                    <td class="centered">
-                        <select class="additionsOptionSelect" id="additions_6">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
-                        </div>
-                    </td>
-                    <td class="centered">
-                        <select class="disciplinesOptionSelect" id="discipline_6">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
-                        </div>
-                    </td>
-                    <td class="centered">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td rowspan="2" data-name="Добродетели">
+                        <div class="flowRoot overrideFlowRoot">
+                            <div>Самоконтроль/Инстинкты</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
-                        <select class="additionsOptionSelect" id="additions_7">
-                        </select>
-                    </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                    <td data-name="Дополнения">
+                        <div class="flowRoot">
+                            <div><select class="additionsOptionSelect" id="additions_4">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
-                    <td class="centered">
-                        <select class="disciplinesOptionSelect" id="discipline_7">
-                        </select>
+                    <td data-name="Дисциплины">
+                        <div class="flowRoot">
+                            <div><select class="disciplinesOptionSelect" id="discipline_4">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
+                        </div>
                     </td>
-                    <td class="fromRight">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                </tr>
+                <tr>
+                    <td data-name="Дополнения">
+                        <div class="flowRoot">
+                            <div><select class="additionsOptionSelect" id="additions_5">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Дисциплины">
+                        <div class="flowRoot">
+                            <div><select class="disciplinesOptionSelect" id="discipline_5">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
+                        </div>
+                    </td>
+                    <td rowspan="2" data-name="Добродетели">
+                        <div class="flowRoot overrideFlowRoot">
+                            <div>Смелость</div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Дополнения">
+                        <div class="flowRoot">
+                            <div><select class="additionsOptionSelect" id="additions_6">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Дисциплины">
+                        <div class="flowRoot">
+                            <div><select class="disciplinesOptionSelect" id="discipline_6">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td data-name="Дополнения">
+                        <div class="flowRoot">
+                            <div><select class="additionsOptionSelect" id="additions_7">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
+                        </div>
+                    </td>
+                    <td data-name="Дисциплины">
+                        <div class="flowRoot">
+                            <div><select class="disciplinesOptionSelect" id="discipline_7">
+                                </select></div>
+                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            </div>
                         </div>
                     </td>
                     <td></td>
                 </tr>
             </table>
-            <div class="centered">
+            <div class="customHeader">
                 <hr>
                 <hr>
             </div>
@@ -583,217 +589,217 @@
                     <th colspan="2" class="oneThird">Здоровье</th>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_0">
                         </select>
                     </td>
-                    <td class="centered">
+                    <td data-name="Человечность/Путь" class="centered">
                         <input type="text" />
                     </td>
-                    <td>
+                    <td class="hideIfScreenNarrow">
                         <div>
                             Задет<br>
                         </div>
                     </td>
-                    <td class="fromRight">
-                        <input type="checkbox" />
+                    <td class="fromRight hideIfScreenNarrow">
+                        <input class="noClick" type="checkbox" />
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_1">
                         </select>
                     </td>
-                    <td class="centered">
+                    <td data-name="Человечность/Путь" class="centered">
                         <div class="pointContainer" onclick="clickHandling(this)" data-element-count="10"></div>
                     </td>
-                    <td>
+                    <td class="hideIfScreenNarrow">
                         <div>
                             Поврежден<br>
                         </div>
                     </td>
-                    <td>
-                        <label>-1<input class="fromRight" type="checkbox" /></label>
+                    <td class="hideIfScreenNarrow">
+                        <label>-1<input class="fromRight noClick" type="checkbox" /></label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_2">
                         </select>
                     </td>
-                    <td class="centered">
-                        <div>Сила Воли</div>
+                    <td class="centered hideIfScreenNarrow">
+                        <div class="customHeader">Сила Воли</div>
                     </td>
-                    <td>
+                    <td class="hideIfScreenNarrow">
                         <div>
                             Ранен<br>
                         </div>
                     </td>
-                    <td>
-                        <label>-1<input class="fromRight" type="checkbox" /></label>
+                    <td class="hideIfScreenNarrow">
+                        <label>-1<input class="fromRight noClick" type="checkbox" /></label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_3">
                         </select>
                     </td>
-                    <td class="centered">
+                    <td data-name="Сила Воли" class="centered">
                         <div class="pointContainer" onclick="clickHandling(this)" data-element-count="10">
                         </div>
-                    <td>
+                    <td class="hideIfScreenNarrow">
                         <div>
                             Тяжело Ранен<br>
                         </div>
                     </td>
-                    <td>
-                        <label>-2<input class="fromRight" type="checkbox" /></label>
+                    <td class="hideIfScreenNarrow">
+                        <label>-2<input class="fromRight noClick" type="checkbox" /></label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_4">
                         </select>
                     </td>
-                    <td class="centered">
+                    <td class="centered hideIfScreenNarrow">
                         <div class="inlineBlock">
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
                         </div>
                     </td>
-                    <td>
+                    <td class="hideIfScreenNarrow">
                         <div>
                             Травмирован<br>
                         </div>
                     </td>
-                    <td>
-                        <label>-2<input class="fromRight" type="checkbox" /></label>
+                    <td class="hideIfScreenNarrow">
+                        <label>-2<input class="fromRight noClick" type="checkbox" /></label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_5">
                         </select>
                     </td>
-                    <td class="centered">
-                        <div class="inlineBlock">
-                            <div>Запас Крови</div>
-                        </div>
+                    <td class="centered hideIfScreenNarrow">
+                        <div class="customHeader">Запас Крови</div>
                     </td>
-                    <td>
+                    <td class="hideIfScreenNarrow">
                         <div>
                             Искалечен<br>
                         </div>
                     </td>
-                    <td>
-                        <label>-5<input class="fromRight" type="checkbox" /></label>
+                    <td class="hideIfScreenNarrow">
+                        <label>-5<input class="fromRight noClick" type="checkbox" /></label>
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_6">
                         </select>
                     </td>
-                    <td class="centered">
+                    <td class="centered hideIfScreenNarrow">
                         <div class="inlineBlock">
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
                         </div>
                     </td>
-                    <td>
+                    <td class="hideIfScreenNarrow">
                         <div>
                             Обездвижен<br>
                         </div>
                     </td>
-                    <td class="fromRight">
-                        <input type="checkbox" />
+                    <td class="fromRight hideIfScreenNarrow">
+                        <input class="noClick" type="checkbox" />
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_7">
                         </select>
                     </td>
-                    <td class="centered">
+                    <td class="centered hideIfScreenNarrow">
                         <div class="inlineBlock">
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
                         </div>
                     </td>
-                    <td>
+                    <td class="hideIfScreenNarrow">
                         <div>
                             Торпор<br>
                         </div>
                     </td>
-                    <td class="fromRight">
-                        <input type="checkbox" />
+                    <td class="fromRight hideIfScreenNarrow">
+                        <input class="noClick" type="checkbox" />
                     </td>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_8">
                         </select>
                     </td>
-                    <td class="centered">
+                    <td class="centered hideIfScreenNarrow">
                         <div class="inlineBlock">
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
                         </div>
                     </td>
-                    <td colspan="2" class="centered oneThird">Слабость</td>
+                    <td colspan="2" class="centered oneThird hideIfScreenNarrow">
+                        <div class="customHeader">Слабость</div>
+                    </td>
                 </tr>
                 <tr>
-                    <td class="centered">
+                    <td data-name="Пороки/Добродетели" class="centered">
                         <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_9">
                         </select>
                     </td>
-                    <td class="centered">
+                    <td class="centered hideIfScreenNarrow">
                         <div class="inlineBlock">
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
-                            <input type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
+                            <input class="noClick" type="checkbox" />
                         </div>
                     </td>
-                    <td colspan="2" class="centered oneThird">
+                    <td data-name="Слабость" colspan="2" class="centered oneThird">
                         <input type="text" />
                     </td>
                 </tr>

@@ -10,67 +10,10 @@ html {
     font-size: 1em;
 }
 
-@media screen and (max-width: 790px) {
-    table {
-        border: 0;
-    }
-
-    table caption {
-        font-size: 1.3em;
-    }
-
-    table tr {
-        border-bottom: 3px solid #ddd;
-        display: block;
-        margin-bottom: .625em;
-    }
-
-    table td {
-        border-bottom: 1px solid #ddd;
-        display: block;
-        font-size: .8em;
-        margin: 1em 0;
-        text-align: right;
-    }
-
-    table td::before {
-        content: attr(data-name);
-        float: left;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-
-    table td:last-child {
-        border-bottom: 0;
-    }
-
-    .hideIfScreenNarrow {
-        display: none;
-    }
-
-    table th {
-        display: none;
-    }
-}
-
-@media only screen and (min-width: 790px) {
-    .centered {
-        text-align: center;
-    }
-
-    .fromRight {
-        float: right;
-    }
-}
-
 .basicInfoTable {
     margin-left: auto;
     margin-right: auto;
     width: 80%;
-}
-
-.basicInfoTable td {
-    padding: 2px;
 }
 
 .basicInfoTable td input[type="text"] {
@@ -98,8 +41,8 @@ html {
     margin: 0;
 }
 
-.oneThird {
-    width: 33%;
+.noClick {
+    pointer-events: none;
 }
 
 .additionsOptionSelect {
@@ -168,8 +111,87 @@ html {
 
 .flowRoot div:nth-child(1) {
     float: left;
+    margin: 5px 0 0 0;
 }
 
 .flowRoot div:nth-child(2) {
     float: right;
+    margin: 5px 0 0 0;
+}
+
+@media screen and (max-width: 790px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: .8em;
+        margin: 1em 0;
+        text-align: right;
+    }
+
+    table td::before {
+        content: attr(data-name);
+        float: left;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    table td:empty {
+        display: none;
+    }
+
+    table th {
+        display: none;
+    }
+
+    .hideIfScreenNarrow {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 790px) {
+    .basicInfoTable td {
+        padding: 2px;
+    }
+
+    .centered {
+        text-align: center;
+    }
+
+    .fromRight {
+        float: right;
+    }
+
+    .overrideFlowRoot {
+        text-align: center;
+    }
+
+    .overrideFlowRoot div:nth-child(1) {
+        float: none;
+    }
+
+    .overrideFlowRoot div:nth-child(2) {
+        float: none;
+    }
+
+    .oneThird {
+        width: 33.3%;
+    }
 }

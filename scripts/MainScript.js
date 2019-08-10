@@ -4,7 +4,7 @@
 var runtimeCheckboxIDCounter = 0;
 
 function setEmptyPoint(inputElement) {
-  
+
     if (!inputElement || (inputElement.tagName !== "INPUT" && inputElement.type === "checkbox")) {
         return;
     }
@@ -160,8 +160,8 @@ function addOptions(element, optionArray) {
 }
 
 function tuningDocument() {
-    let divs = document.getElementsByClassName("pointContainer");
 
+    let divs = document.getElementsByClassName("pointContainer");
     for (let index = 0; index < divs.length; index++) {
         addInputPoints(divs[index], divs[index].dataset.elementCount);
     }
