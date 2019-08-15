@@ -1,137 +1,119 @@
-body {
-    /*height: 297mm;*/
+.basicInfoTable,body {
     margin-left: auto;
-    margin-right: auto;
-    /*width: 210mm;*/
+    margin-right: auto
 }
 
 html {
     font-family: sans-serif;
-    font-size: 1em;
+    font-size: 1em
 }
 
 .basicInfoTable {
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
+    width: 80%
 }
 
-.basicInfoTable td input[type="text"] {
-    /*width: 14em;*/
+.basicInfoTable td input[type=text] {
     display: table-cell;
-    width: 100%;
+    width: 100%
 }
 
 .bordered {
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #000
 }
 
 .inlineBlock {
-    display: inline-block;
+    display: inline-block
 }
 
 .inlineBlock img {
     float: left;
     height: 15px;
-    padding: 0 1px;
+    padding: 0 1px
 }
 
-.inlineBlock input[type="checkbox"] {
+.inlineBlock input[type=checkbox] {
     height: 15px;
-    margin: 0;
+    margin: 0
 }
 
 .noClick {
-    pointer-events: none;
+    pointer-events: none
 }
 
-.additionsOptionSelect {
+.additionsOptionSelect,.advantagesDisadvantagesOptionSelect,.disciplinesOptionSelect {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
-    box-shadow: none;
-}
-
-.advantagesDisadvantagesOptionSelect {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}
-
-.disciplinesOptionSelect {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
+    box-shadow: none
 }
 
 .disabledCheckbox {
-    pointer-events: none;
+    pointer-events: none
 }
 
 .pointCheckbox {
-    display: none;
+    display: none
 }
 
 .pointCheckbox+label {
-    background-image: url("../images/EmptyPoint.png");
+    background-image: url(../images/EmptyPoint.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
     display: inline-block;
     height: 15px;
     margin: 0 1px;
-    width: 15px;
+    width: 15px
 }
 
 .pointCheckbox:checked+label {
-    background-image: url("../images/FillPoint.png");
+    background-image: url(../images/FillPoint.png)
 }
 
 .pointContainer {
-    display: inline-block;
+    display: inline-block
 }
 
 .pointContainer img {
     height: 15px;
-    padding: 0 1px;
+    padding: 0 1px
 }
 
 .customHeader {
-    font-weight: bold;
+    font-weight: 700;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    width: 80%;
+    width: 80%
 }
 
 .flowRoot {
     clear: left;
-    /*disable Require use of known properties*/
-    display: flow-root;
+    display: flow-root
 }
 
 .flowRoot div:nth-child(1) {
     float: left;
-    margin: 5px 0 0 0;
+    margin: 5px 0 0
 }
 
 .flowRoot div:nth-child(2) {
     float: right;
-    margin: 5px 0 0 0;
+    margin: 5px 0 0
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width:790px) {
     table {
-        border: 0;
+        border: 0
     }
 
     table caption {
-        font-size: 1.3em;
+        font-size: 1.3em
     }
 
     table tr {
         border-bottom: 3px solid #ddd;
         display: block;
-        margin-bottom: .625em;
+        margin-bottom: .625em
     }
 
     table td {
@@ -139,59 +121,51 @@ html {
         display: block;
         font-size: .8em;
         margin: 1em 0;
-        text-align: right;
+        text-align: right
     }
 
     table td::before {
         content: attr(data-name);
         float: left;
-        font-weight: bold;
-        text-transform: uppercase;
+        font-weight: 700;
+        text-transform: uppercase
     }
 
     table td:last-child {
-        border-bottom: 0;
+        border-bottom: 0
     }
 
     table td:empty {
-        display: none;
+        display: none
     }
 
-    table th {
-        display: none;
-    }
-
-    .hideIfScreenNarrow {
-        display: none;
+    .hideIfScreenNarrow,table th {
+        display: none
     }
 }
 
-@media only screen and (min-width: 790px) {
+@media only screen and (min-width:790px) {
     .basicInfoTable td {
-        padding: 2px;
+        padding: 2px
     }
 
     .centered {
-        text-align: center;
+        text-align: center
     }
 
     .fromRight {
-        float: right;
+        float: right
     }
 
     .overrideFlowRoot {
-        text-align: center;
+        text-align: center
     }
 
-    .overrideFlowRoot div:nth-child(1) {
-        float: none;
-    }
-
-    .overrideFlowRoot div:nth-child(2) {
-        float: none;
+    .overrideFlowRoot div:nth-child(1),.overrideFlowRoot div:nth-child(2) {
+        float: none
     }
 
     .oneThird {
-        width: 33.3%;
+        width: 33.3%
     }
 }
