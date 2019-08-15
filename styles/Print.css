@@ -1,78 +1,65 @@
 @media print {
-
     html {
-        font-size: 0.8em;
+        font-size: .8em
     }
 
     body {
         height: 297mm;
         margin-left: auto;
         margin-right: auto;
-        width: 210mm;
+        width: 210mm
     }
 
-    input[type="text"] {
+    input[type=text],select {
         border-bottom: 1px solid gray;
         border-left: none;
         border-right: none;
-        border-top: none;
+        border-top: none
     }
 
     select {
         -moz-appearance: none;
         -webkit-appearance: none;
-        border-bottom: 1px solid gray;
-        border-left: none;
-        border-right: none;
-        border-top: none;
-        text-align-last: center;
+        text-align-last: center
     }
 
-    .basicInfoTable {
-        width: 100%;
-    }
-
-    .customHeader {
-        width: 100%;
+    .basicInfoTable,.customHeader {
+        width: 100%
     }
 
     .centered {
-        text-align: center;
+        text-align: center
     }
 
     .fromRight {
-        float: right;
+        float: right
     }
 
     .no-print {
-        display: none;
+        display: none
     }
 
     .pointCheckbox+label {
-        content: url("../images/EmptyPoint.png");
+        content: url(../images/EmptyPoint.png)
     }
 
     .pointCheckbox:checked+label {
-        content: url("../images/FillPoint.png");
+        content: url(../images/FillPoint.png)
     }
 
     .overrideFlowRoot {
-        text-align: center;
+        text-align: center
     }
 
-    .overrideFlowRoot div:nth-child(1) {
-        float: none;
-    }
-
-    .overrideFlowRoot div:nth-child(2) {
-        float: none;
+    .overrideFlowRoot div:nth-child(1),.overrideFlowRoot div:nth-child(2) {
+        float: none
     }
 
     .percent30 {
-        width: 30%;
+        width: 30%
     }
 
     .percent50 {
-        width: 50%;
+        width: 50%
     }
 }
