@@ -1,4 +1,5 @@
-.basicInfoTable,body {
+.basicInfoTable,
+body {
     margin-left: auto;
     margin-right: auto
 }
@@ -40,7 +41,9 @@ html {
     pointer-events: none
 }
 
-.additionsOptionSelect,.advantagesDisadvantagesOptionSelect,.disciplinesOptionSelect {
+.additionsOptionSelect,
+.advantagesDisadvantagesOptionSelect,
+.disciplinesOptionSelect {
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none
@@ -92,9 +95,9 @@ html {
 }
 
 .clearfix:after {
-  content: "";
-  display: table;
-  clear: both;
+    content: "";
+    clear: both;
+    display: table;
 }
 
 .flowRoot div:nth-child(1) {
@@ -145,7 +148,8 @@ html {
         display: none
     }
 
-    .hideIfScreenNarrow,table th {
+    .hideIfScreenNarrow,
+    table th {
         display: none
     }
 }
@@ -167,7 +171,8 @@ html {
         text-align: center
     }
 
-    .overrideFlowRoot div:nth-child(1),.overrideFlowRoot div:nth-child(2) {
+    .overrideFlowRoot div:nth-child(1),
+    .overrideFlowRoot div:nth-child(2) {
         float: none
     }
 
