@@ -91,6 +91,12 @@ html {
     display: flow-root
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .flowRoot div:nth-child(1) {
     float: left;
     margin: 5px 0 0
