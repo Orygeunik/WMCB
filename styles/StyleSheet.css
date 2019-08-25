@@ -95,9 +95,9 @@ html {
 }
 
 .clearfix:after {
-    content: "";
     clear: both;
-    display: table;
+    content: "";
+    display: block;
 }
 
 .flowRoot div:nth-child(1) {
