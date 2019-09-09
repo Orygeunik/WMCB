@@ -97,7 +97,7 @@ html {
 .clearfix:after {
     clear: both;
     content: "";
-    display: block;
+    display: block
 }
 
 .flowRoot div:nth-child(1) {
