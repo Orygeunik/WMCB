@@ -18,6 +18,10 @@ html {
     width: 100%
 }
 
+.basicInfoTable input[type=checkbox] {
+    pointer-events: none
+}
+
 .bordered {
     border-bottom: 1px solid #000
 }
@@ -35,10 +39,6 @@ html {
 .inlineBlock input[type=checkbox] {
     height: 15px;
     margin: 0
-}
-
-.noClick {
-    pointer-events: none
 }
 
 .additionsOptionSelect,
@@ -97,7 +97,7 @@ html {
 .clearfix:after {
     clear: both;
     content: "";
-    display: block;
+    display: block
 }
 
 .flowRoot div:nth-child(1) {
