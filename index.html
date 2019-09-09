@@ -13,6 +13,7 @@
     <script async defer src="scripts/Print/PrintScript.js"></script>
     <script async defer src="scripts/Print/PrepressScript.js"></script>
     <script async defer src="scripts/Print/PostpressScript.js"></script>
+    <script async defer src="scripts/EventLinker.js"></script>
 </head>
 
 <body onload="tuningDocument(); printSetup();">
@@ -93,21 +94,21 @@
                     <td data-name="Физические">
                         <div class="flowRoot clearfix">
                             <div>Сила</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Социальные">
                         <div class="flowRoot clearfix">
                             <div>Обаяние</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer noClick" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Ментайные">
                         <div class="flowRoot clearfix">
                             <div>Восприятие</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -116,21 +117,21 @@
                     <td data-name="Физические">
                         <div class="flowRoot clearfix">
                             <div>Ловкость</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Социальные">
                         <div class="flowRoot clearfix">
                             <div>Манипуляция</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Ментайные">
                         <div class="flowRoot clearfix">
                             <div>Интеллект</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -139,21 +140,21 @@
                     <td data-name="Физические">
                         <div class="flowRoot clearfix">
                             <div>Выносливость</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Социальные">
                         <div class="flowRoot clearfix">
                             <div>Внешность</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Ментайные">
                         <div class="flowRoot clearfix">
                             <div>Смекалка</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -173,21 +174,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Атлетика</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Безопасность</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Академические</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -196,21 +197,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Внимательность</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Вождение</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Законы</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -219,21 +220,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Запугивание</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Выживание</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Компьютеры</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -242,21 +243,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Знание улиц</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Исполнение</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Лингвистика</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -265,21 +266,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Лидерство</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Знание животных</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Медицина</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -288,21 +289,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Рукопашный бой</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Ремесла</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Научные</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -311,21 +312,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Уклонение</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Скрытность</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Оккультизм</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -334,21 +335,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Хитрость</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Стрельба</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Политика</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -357,21 +358,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Экспрессия</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Фехтование</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Расследование</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -380,21 +381,21 @@
                     <td data-name="Таланты">
                         <div class="flowRoot clearfix">
                             <div>Эмпатия</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Навыки">
                         <div class="flowRoot clearfix">
                             <div>Этикет</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Познания">
                         <div class="flowRoot clearfix">
                             <div>Финансы</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="8">
+                            <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
@@ -415,7 +416,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="additionsOptionSelect" id="additions_0">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -423,7 +424,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="disciplinesOptionSelect" id="discipline_0">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -434,7 +435,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="additionsOptionSelect" id="additions_1">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -442,14 +443,14 @@
                         <div class="flowRoot clearfix">
                             <div><select class="disciplinesOptionSelect" id="discipline_1">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
                     <td rowspan="2" data-name="Добродетели">
                         <div class="flowRoot overrideFlowRoot">
                             <div>Сознательность/Убежденность</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -459,7 +460,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="additionsOptionSelect" id="additions_2">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -467,7 +468,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="disciplinesOptionSelect" id="discipline_2">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -477,7 +478,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="additionsOptionSelect" id="additions_3">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -485,14 +486,14 @@
                         <div class="flowRoot clearfix">
                             <div><select class="disciplinesOptionSelect" id="discipline_3">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
                     <td rowspan="2" data-name="Добродетели">
                         <div class="flowRoot overrideFlowRoot">
                             <div>Самоконтроль/Инстинкты</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -502,7 +503,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="additionsOptionSelect" id="additions_4">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -510,7 +511,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="disciplinesOptionSelect" id="discipline_4">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -520,7 +521,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="additionsOptionSelect" id="additions_5">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -528,14 +529,14 @@
                         <div class="flowRoot clearfix">
                             <div><select class="disciplinesOptionSelect" id="discipline_5">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
                     <td rowspan="2" data-name="Добродетели">
                         <div class="flowRoot overrideFlowRoot">
                             <div>Смелость</div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -545,7 +546,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="additionsOptionSelect" id="additions_6">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -553,7 +554,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="disciplinesOptionSelect" id="discipline_6">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -563,7 +564,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="additionsOptionSelect" id="additions_7">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -571,7 +572,7 @@
                         <div class="flowRoot clearfix">
                             <div><select class="disciplinesOptionSelect" id="discipline_7">
                                 </select></div>
-                            <div class="pointContainer" onclick="clickHandling(this)" data-element-count="5">
+                            <div class="pointContainer" data-element-count="5">
                             </div>
                         </div>
                     </td>
@@ -611,7 +612,7 @@
                         </select>
                     </td>
                     <td data-name="Человечность/Путь" class="centered">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="10"></div>
+                        <div class="pointContainer" data-element-count="10"></div>
                     </td>
                     <td class="hideIfScreenNarrow">
                         <div>
@@ -645,7 +646,7 @@
                         </select>
                     </td>
                     <td data-name="Сила Воли" class="centered">
-                        <div class="pointContainer" onclick="clickHandling(this)" data-element-count="10">
+                        <div class="pointContainer" data-element-count="10">
                         </div>
                     <td class="hideIfScreenNarrow">
                         <div>
