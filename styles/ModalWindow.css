@@ -37,6 +37,16 @@
     text-decoration: none
 }
 
+.buttonModalWindow {
+    background: url(../images/Help.png);
+    border: 0;
+    cursor: pointer
+}
+
+.buttonModalWindow:hover {
+    background: url(../images/HelpHover.png)
+}
+
 .buttonModalWindow,
 .buttonModalWindow:hover {
     background-position: center;
@@ -47,14 +57,4 @@
     margin: 0 1px;
     vertical-align: middle;
     width: 19px
-}
-
-.buttonModalWindow {
-    background: url(../images/Help.png);
-    border: 0;
-    cursor: pointer
-}
-
-.buttonModalWindow:hover {
-    background: url(../images/HelpHover.png)
 }
