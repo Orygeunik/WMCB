@@ -4,10 +4,11 @@
 
 var modalWindow;
 var modalWindowContentParagraph;
+var modalWindowCloseDummy;
 
 function initModalWindowSystem() {
     modalWindow = document.getElementById("descriptionModalWindow");
-    const modalWindowCloseDummy = document.getElementById("descriptionModalWindowCloseDummy");
+    modalWindowCloseDummy = document.getElementById("descriptionModalWindowCloseDummy");
 
     modalWindowContentParagraph = document.querySelector(".modalWindowContent p");
 
@@ -21,5 +22,7 @@ function openModalWindow(textInModalWindow) {
 }
 
 function closeModalWindow() {
-    modalWindow.style.display = "none";
+    if (event.target === modalWindow || event.target === modalWindowCloseDummy) {
+        modalWindow.style.display = "none";
+    }
 }
