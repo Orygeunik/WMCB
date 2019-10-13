@@ -17,7 +17,7 @@ function initModalWindowSystem() {
 }
 
 function openModalWindow(textInModalWindow) {
-    modalWindowContentParagraph.textContent = textInModalWindow;
+    modalWindowContentParagraph.innerText = textInModalWindow;
     modalWindow.style.display = "block";
 }
 
