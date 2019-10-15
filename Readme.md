@@ -9,6 +9,9 @@
 #### Общее описание
 
 Проект представляет из себя помощник в создании персонажа для роли-плей игры Вампиры: Маскарад (Vampire: the Masquerade). Помощник, на текущий момент не интерактивный (в дальнейшем планируется добавить интерактивность). После распределения очков и выбора необходимых характеристик достаточно "распечатать страницу" (в браузере выбрать Crtl + P), страница будет собрана согласно классическому листу персонажа игры.
+
+Зеленый значок ![Green help icon](https://github.com/Orygeunik/WMCB/blob/8b64c720eef961585626e03b06091935bbebf620/images/Help.png) возле поля - вызывает модальное окно, в котором указана информация об этом поле или выбранном параметре.
+
 P.S. Основное назначение помощника помочь при создании персонажа для друзей и себя :-)
 
 ##### Техническое описание
@@ -34,6 +37,9 @@ P.S. Основное назначение помощника помочь пр�
 #### General description
 
 This project presents assistant to create characters for role-play game Vampire: the Masquerade. At this moment, assistant is not interactive (there are plans to add interactivity to this project). After points were distributed and needed characteristics selected just print resulted page (in your browser press Ctrl (or Command) + P), that page will be formed according to character blank from original game.
+
+Green icon ![Green help icon](https://github.com/Orygeunik/WMCB/blob/8b64c720eef961585626e03b06091935bbebf620/images/Help.png) near field is calling modal window in such window indicated info about this field or selected option.
+
 P.S. Main purpose of the project is to give a help to build characters for my friends and me :-)
 
 ##### Tech overview
