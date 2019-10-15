@@ -7,17 +7,25 @@
     <title>Помощник в создании персонажа</title>
     <link href="styles/StyleSheet.css" rel="stylesheet" type="text/css">
     <link href="styles/Print.css" rel="stylesheet" type="text/css">
+    <link href="styles/ModalWindow.css" rel="stylesheet" type="text/css">
     <script async defer src="scripts/MainScript.js"></script>
     <script async defer src="scripts/Tools.js"></script>
     <script async defer src="scripts/DatabaseScript.js"></script>
     <script async defer src="scripts/Print/PrintScript.js"></script>
     <script async defer src="scripts/Print/PrepressScript.js"></script>
-    <script async defer src="scripts/Print/PostpressScript.js"></script>
+    <script async defer src="scripts/Print/PostpressScript.js"></script>    
+    <script async defer src="scripts/Modal/ModalSystem.js"></script>
     <script async defer src="scripts/EventLinker.js"></script>
 </head>
 
-<body onload="tuningDocument(); printSetup();">
+<body onload="tuningDocument(); printSetup(); initModalWindowSystem();">
     <div>
+        <div id="descriptionModalWindow" class="modalWindow">
+            <div class="modalWindowContent">
+                <span id="descriptionModalWindowCloseDummy" class="modalWindowClose">&times;</span>
+                <p>This could be your ad.</p>
+            </div>
+        </div>
         <form>
             <table class="basicInfoTable">
                 <caption>Листок персонажа вампира</caption>

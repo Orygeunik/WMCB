@@ -1,0 +1,65 @@
+.modalWindow {
+    background-color: #000;
+    background-color: rgba(0, 0, 0, .4);
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.modalWindowContent {
+    background-color: #fefefe;
+    left: 50%;
+    margin: auto -50% auto auto;
+    max-height: 100%;
+    outline: 1px solid #888;
+    overflow-y: scroll;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%
+}
+
+.modalWindowContent p {
+    margin: 0 20px;
+}
+
+.modalWindowClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: 700
+}
+
+.modalWindowClose:focus,
+.modalWindowClose:hover {
+    color: #000;
+    cursor: pointer;
+    text-decoration: none
+}
+
+.buttonModalWindow {
+    background: url(../images/Help.png);
+    border: 0;
+    cursor: pointer
+}
+
+.buttonModalWindow:hover {
+    background: url(../images/HelpHover.png)
+}
+
+.buttonModalWindow,
+.buttonModalWindow:hover {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+    height: 19px;
+    margin: 0 1px;
+    vertical-align: middle;
+    width: 19px
+}
