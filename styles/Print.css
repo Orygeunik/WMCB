@@ -10,7 +10,8 @@
         width: 210mm
     }
 
-    input[type=text],select {
+    input[type=text],
+    select {
         border-bottom: 1px solid gray;
         border-left: none;
         border-right: none;
@@ -23,7 +24,12 @@
         text-align-last: center
     }
 
-    .basicInfoTable,.customHeader {
+    .basicInfoTable,
+    .customHeader {
+        width: 100%
+    }
+
+    .basicInfoTable td input[type=text]:not(:last-child) {
         width: 100%
     }
 
@@ -51,7 +57,8 @@
         text-align: center
     }
 
-    .overrideFlowRoot div:nth-child(1),.overrideFlowRoot div:nth-child(2) {
+    .overrideFlowRoot div:nth-child(1),
+    .overrideFlowRoot div:nth-child(2) {
         float: none
     }
 
