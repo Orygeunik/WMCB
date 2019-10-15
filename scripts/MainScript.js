@@ -72,8 +72,6 @@ function changeSidePoints(parentElement, clickedElement) {
         return;
     }
 
-    changePointState(listOfChild[clickedElementIndex]);
-
     for (let index = 0; index < listOfChild.length; index++) {
         if (index < clickedElementIndex) {
             setFillPoint(listOfChild[index]);
@@ -91,17 +89,17 @@ function clickHandling(targetElement) {
         return;
     }
 
-    if (targetElement.tagName === "DIV") {
-
-        const clickedElement = document.elementFromPoint(event.clientX, event.clientY);
-
-        if (clickedElement.tagName !== "LABEL") {
-            return;
-        }
-
-        changeSidePoints(targetElement, clickedElement);
+    if (!targetElement.target) {
+        return;
     }
 
+    const clickedElement = targetElement.target;
+
+    if (clickedElement.tagName !== "LABEL") {
+        return;
+    }
+
+    changeSidePoints(clickedElement.parentNode, clickedElement);
 }
 
 function addInputPoints(rootElement, elementCount) {
@@ -145,7 +143,6 @@ function addOptions(element, optionArray) {
 
     element.options.length = 0;
 
-
     for (let i = 0; i < optionArray.length; i++) {
         const opt = optionArray[i];
         let el = document.createElement("option");
@@ -164,6 +161,7 @@ function tuningDocument() {
     let divs = document.getElementsByClassName("pointContainer");
     for (let index = 0; index < divs.length; index++) {
         addInputPoints(divs[index], divs[index].dataset.elementCount);
+        linkEventTo(divs[index], "click", clickHandling);
     }
 
     let selectsAdvantagesDisadvantages = document.getElementsByClassName("advantagesDisadvantagesOptionSelect");
