@@ -341,3 +341,9 @@ const disciplinesOptions = [
     { "value": "Ushabti", "text": "\u00A0Ушебти", "disabled": false, "selected": false },
     { "value": "Spiritus", "text": "Шаманство", "disabled": false, "selected": false }
 ];
+
+const tooltipsDescriptionDictionary = {
+    ru: {
+        nature: "«Истинная» личность вашего персонажа – кем он является глубоко внутри"
+    }
+}
