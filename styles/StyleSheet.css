@@ -18,6 +18,10 @@ html {
     width: 100%
 }
 
+.basicInfoTable td input[type=text]:not(:last-child) {
+    width: calc(100% - 30px)
+}
+
 .basicInfoTable input[type=checkbox] {
     pointer-events: none
 }
