@@ -11,16 +11,14 @@
     <script src="scripts/Tools.js"></script>
     <script src="scripts/EventLinker.js"></script>
     <script src="scripts/MainScript.js"></script>
-    <script src="scripts/DatabaseScript.js"></script>
+    <script src="scripts/Database/DatabaseStruct.js"></script>
     <script async defer src="scripts/Print/PrintScript.js"></script>
     <script async defer src="scripts/Print/PrepressScript.js"></script>
     <script async defer src="scripts/Print/PostpressScript.js"></script>
     <script async defer src="scripts/Modal/ModalSystem.js"></script>
+    <script async defer src="scripts/Database/DatabaseTooltip.js"></script>
     <script>
-        document.addEventListener("DOMContentLoaded", (event) =>
-            {                
-                tuningDocument();                
-            });
+        linkEventTo(document,"DOMContentLoaded",tuningDocument);        
     </script>
 </head>
 
