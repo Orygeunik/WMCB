@@ -20,7 +20,16 @@ function initModalWindowSystem() {
 }
 
 function openModalWindow(textInModalWindow) {
-    modalWindowContentParagraph.innerText = textInModalWindow;
+    openModalWindow(textInModalWindow, false);
+}
+
+function openModalWindow(textInModalWindow, parseHTML) {
+    if (parseHTML === true) {
+        modalWindowContentParagraph.innerHTML = textInModalWindow;
+    } else {
+        modalWindowContentParagraph.innerText = textInModalWindow;
+    }
+
     modalWindow.style.display = "block";
     mainBodyElement.style.overflow = "hidden";
 }

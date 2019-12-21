@@ -11,7 +11,7 @@
     <script src="scripts/Tools.js"></script>
     <script src="scripts/MainScript.js"></script>
     <script src="scripts/Database/DatabaseStruct.js"></script>
-    <script async defer src="scripts/Print/PrintScript.js"></script>    
+    <script async defer src="scripts/Print/PrintScript.js"></script>
     <script async defer src="scripts/Modal/ModalSystem.js"></script>
     <script async defer src="scripts/Database/DatabaseTooltip.js"></script>
     <script>
@@ -58,6 +58,7 @@
                             <option value="14">XIV</option>
                             <option value="15">XV</option>
                         </select>
+                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterGenerationList)"></button>
                     </td>
                 </tr>
                 <tr>
@@ -88,6 +89,7 @@
                         <select id="characterClan" required>
                             <option value>Empty</option>
                         </select>
+                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterClan)"></button>
                     </td>
                     <td class="hideIfScreenNarrow">Концепт</td>
                     <td data-name="Концепт">
@@ -109,21 +111,27 @@
                 <tr>
                     <td data-name="Физические">
                         <div class="flowRoot clearfix">
-                            <div>Сила</div>
+                            <div>Сила
+                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesStrength)"></button>
+                            </div>
                             <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Социальные">
                         <div class="flowRoot clearfix">
-                            <div>Обаяние</div>
+                            <div>Обаяние
+                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesCharm)"></button>
+                            </div>
                             <div class="pointContainer noClick" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Ментайные">
                         <div class="flowRoot clearfix">
-                            <div>Восприятие</div>
+                            <div>Восприятие
+                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesPerception)"></button>
+                            </div>
                             <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
@@ -132,21 +140,27 @@
                 <tr>
                     <td data-name="Физические">
                         <div class="flowRoot clearfix">
-                            <div>Ловкость</div>
+                            <div>Ловкость
+                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesAgility)"></button>
+                            </div>
                             <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Социальные">
                         <div class="flowRoot clearfix">
-                            <div>Манипуляция</div>
+                            <div>Манипуляция
+                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesManipulation)"></button>
+                            </div>
                             <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Ментайные">
                         <div class="flowRoot clearfix">
-                            <div>Интеллект</div>
+                            <div>Интеллект
+                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesIntelligence)"></button>
+                            </div>
                             <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
@@ -155,21 +169,27 @@
                 <tr>
                     <td data-name="Физические">
                         <div class="flowRoot clearfix">
-                            <div>Выносливость</div>
+                            <div>Выносливость
+                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesStamina)"></button>
+                            </div>
                             <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Социальные">
                         <div class="flowRoot clearfix">
-                            <div>Внешность</div>
+                            <div>Внешность
+                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesAppearance)"></button>
+                            </div>
                             <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
                     </td>
                     <td data-name="Ментайные">
                         <div class="flowRoot clearfix">
-                            <div>Смекалка</div>
+                            <div>Смекалка
+                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesAcumen)"></button>
+                            </div>
                             <div class="pointContainer" data-element-count="8">
                             </div>
                         </div>
@@ -612,7 +632,7 @@
                     </td>
                     <td data-name="Человечность/Путь" class="centered">
                         <input type="text" id="humanity_path" />
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.humanity_path)"></button>
+                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.humanity_path, true)"></button>
                     </td>
                     <td class="hideIfScreenNarrow">
                         <div>
