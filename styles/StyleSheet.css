@@ -10,6 +10,7 @@ html {
 }
 
 .basicInfoTable {
+    margin-top: 30px;
     width: 80%
 }
 
@@ -113,6 +114,41 @@ html {
     float: right;
     margin: 5px 0 0
 }
+
+/* Top bar style */
+.topBar {
+    background-color: #333;
+    height: 30px;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%
+}
+
+.topBar button {
+    float: right;
+    margin: 5px;
+    max-height: 20px
+}
+
+/* End top bar style */
+
+/* Color mode switch */
+.darkColorMode {
+    background: #000
+}
+
+.darkColorMode form {
+    filter: invert(1);
+    -webkit-filter: invert(1)
+}
+
+.darkColorMode option {
+    background: #000;
+    color: #fff
+}
+
+/* End color mode switch*/
 
 @media screen and (max-width:790px) {
     table {

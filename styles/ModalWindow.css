@@ -11,6 +11,13 @@
     z-index: 1
 }
 
+.modalWindowDarkColor {
+    background-color: #fff;
+    background-color: rgba(0, 0, 0, .1);
+    filter: invert(1);
+    -webkit-filter: invert(1)
+}
+
 .modalWindowContent {
     background-color: #fefefe;
     left: 50%;
@@ -25,7 +32,7 @@
 }
 
 .modalWindowContent p {
-    margin: 20px;
+    margin: 20px
 }
 
 .modalWindowClose {
