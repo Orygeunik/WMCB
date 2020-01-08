@@ -10,6 +10,11 @@
         width: 210mm
     }
 
+    form {
+        margin-top: 0
+    }
+
+
     input[type=text],
     select {
         border-bottom: 1px solid gray;
@@ -35,6 +40,20 @@
 
     .centered {
         text-align: center
+    }
+
+    .darkColorMode {
+        background: #fff
+    }
+
+    .darkColorMode form {
+        filter: invert(0);
+        -webkit-filter: invert(0)
+    }
+
+    .darkColorMode option {
+        background: #fff;
+        color: #000
     }
 
     .fromRight {

@@ -9,8 +9,11 @@ html {
     font-size: 1em
 }
 
+form {
+    margin-top: 30px
+}
+
 .basicInfoTable {
-    margin-top: 30px;
     width: 80%
 }
 
