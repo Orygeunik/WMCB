@@ -30,833 +30,831 @@
 </head>
 
 <body onload="initModalWindowSystem();printSetup();">
-    <div>
-        <div id="descriptionModalWindow" class="modalWindow">
-            <div class="modalWindowContent">
-                <span id="descriptionModalWindowCloseDummy" class="modalWindowClose">&times;</span>
-                <p>This could be your ad.</p>
-            </div>
+    <div id="descriptionModalWindow" class="modalWindow">
+        <div class="modalWindowContent">
+            <span id="descriptionModalWindowCloseDummy" class="modalWindowClose">&times;</span>
+            <p>This could be your ad.</p>
         </div>
-        <div class="topBar">
-            <button id="switchColorModeButton" onclick="switchColorMode()"></button>
-        </div>
-        <form>
-            <table class="basicInfoTable">
-                <caption>Листок персонажа вампира</caption>
-                <tr>
-                    <td class="hideIfScreenNarrow">Имя</td>
-                    <td data-name="Имя">
-                        <input type="text" id="characterName" />
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterName)"></button>
-                    </td>
-                    <td class="hideIfScreenNarrow">Натура</td>
-                    <td data-name="Натура">
-                        <input type="text" id="characterNature" />
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.nature)"></button>
-                    </td>
-                    <td class="hideIfScreenNarrow">Поколение</td>
-                    <td data-name="Поколение" class="centered">
-                        <select id="characterGenerationList">
-                            <option value="3">III</option>
-                            <option value="4">IV</option>
-                            <option value="5">V</option>
-                            <option value="6">VI</option>
-                            <option value="7">VII</option>
-                            <option value="8">VIII</option>
-                            <option value="9">IX</option>
-                            <option value="10">X</option>
-                            <option value="11">XI</option>
-                            <option value="12">XII</option>
-                            <option value="13" selected>XIII</option>
-                            <option value="14">XIV</option>
-                            <option value="15">XV</option>
-                        </select>
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterGenerationList)"></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="hideIfScreenNarrow">Игрок</td>
-                    <td data-name="Игрок">
-                        <input type="text" id="characterUser" />
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterUser)"></button>
-                    </td>
-                    <td class="hideIfScreenNarrow">Маска</td>
-                    <td data-name="Маска">
-                        <input type="text" id="characterMask" />
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.mask)"></button>
-                    </td>
-                    <td class="hideIfScreenNarrow">Убежище</td>
-                    <td data-name="Убежище">
-                        <input type="text" id="characterShelter" />
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterShelter)"></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="hideIfScreenNarrow">Хроника</td>
-                    <td data-name="Хроника">
-                        <input type="text" id="characterStory" />
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterStory)"></button>
-                    </td>
-                    <td class="hideIfScreenNarrow">Клан</td>
-                    <td data-name="Клан" class="centered">
-                        <select id="characterClan" required>
-                            <option value>Empty</option>
-                        </select>
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterClan)"></button>
-                    </td>
-                    <td class="hideIfScreenNarrow">Концепт</td>
-                    <td data-name="Концепт">
-                        <input type="text" id="characterConcept" />
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterConcept)"></button>
-                    </td>
-                </tr>
-            </table>
-            <div class="customHeader">
-                <hr>Атрибуты
-                <hr>
-            </div>
-            <table class="basicInfoTable">
-                <tr>
-                    <th>Физические</th>
-                    <th>Социальные</th>
-                    <th>Ментайные</th>
-                </tr>
-                <tr>
-                    <td data-name="Физические">
-                        <div class="flowRoot clearfix">
-                            <div>Сила
-                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesStrength)"></button>
-                            </div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Социальные">
-                        <div class="flowRoot clearfix">
-                            <div>Обаяние
-                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesCharm)"></button>
-                            </div>
-                            <div class="pointContainer noClick" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Ментайные">
-                        <div class="flowRoot clearfix">
-                            <div>Восприятие
-                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesPerception)"></button>
-                            </div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Физические">
-                        <div class="flowRoot clearfix">
-                            <div>Ловкость
-                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesAgility)"></button>
-                            </div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Социальные">
-                        <div class="flowRoot clearfix">
-                            <div>Манипуляция
-                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesManipulation)"></button>
-                            </div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Ментайные">
-                        <div class="flowRoot clearfix">
-                            <div>Интеллект
-                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesIntelligence)"></button>
-                            </div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Физические">
-                        <div class="flowRoot clearfix">
-                            <div>Выносливость
-                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesStamina)"></button>
-                            </div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Социальные">
-                        <div class="flowRoot clearfix">
-                            <div>Внешность
-                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesAppearance)"></button>
-                            </div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Ментайные">
-                        <div class="flowRoot clearfix">
-                            <div>Смекалка
-                                <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesAcumen)"></button>
-                            </div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <div class="customHeader">
-                <hr>Способности
-                <hr>
-            </div>
-            <table class="basicInfoTable">
-                <tr>
-                    <th>Таланты</th>
-                    <th>Навыки</th>
-                    <th>Познания</th>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Атлетика</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Безопасность</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Академические</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Внимательность</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Вождение</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Законы</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Запугивание</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Выживание</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Компьютеры</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Знание улиц</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Исполнение</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Лингвистика</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Лидерство</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Знание животных</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Медицина</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Рукопашный бой</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Ремесла</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Научные</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Уклонение</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Скрытность</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Оккультизм</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Хитрость</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Стрельба</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Политика</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Экспрессия</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Фехтование</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Расследование</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Таланты">
-                        <div class="flowRoot clearfix">
-                            <div>Эмпатия</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Навыки">
-                        <div class="flowRoot clearfix">
-                            <div>Этикет</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Познания">
-                        <div class="flowRoot clearfix">
-                            <div>Финансы</div>
-                            <div class="pointContainer" data-element-count="8">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-            </table>
-            <div class="customHeader">
-                <hr>Преимущества
-                <hr>
-            </div>
-            <table class="basicInfoTable">
-                <tr>
-                    <th class="percent30">Дополнения</th>
-                    <th class="percent50">Дисциплины</th>
-                    <th>Добродетели</th>
-                </tr>
-                <tr>
-                    <td data-name="Дополнения">
-                        <div class="flowRoot clearfix">
-                            <div><select class="additionsOptionSelect" id="additions_0">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Дисциплины">
-                        <div class="flowRoot clearfix">
-                            <div><select class="disciplinesOptionSelect" id="discipline_0">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td data-name="Дополнения">
-                        <div class="flowRoot clearfix">
-                            <div><select class="additionsOptionSelect" id="additions_1">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Дисциплины">
-                        <div class="flowRoot clearfix">
-                            <div><select class="disciplinesOptionSelect" id="discipline_1">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td rowspan="2" data-name="Добродетели">
-                        <div class="flowRoot overrideFlowRoot">
-                            <div>Сознательность/Убежденность</div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Дополнения">
-                        <div class="flowRoot clearfix">
-                            <div><select class="additionsOptionSelect" id="additions_2">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Дисциплины">
-                        <div class="flowRoot clearfix">
-                            <div><select class="disciplinesOptionSelect" id="discipline_2">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Дополнения">
-                        <div class="flowRoot clearfix">
-                            <div><select class="additionsOptionSelect" id="additions_3">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Дисциплины">
-                        <div class="flowRoot clearfix">
-                            <div><select class="disciplinesOptionSelect" id="discipline_3">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td rowspan="2" data-name="Добродетели">
-                        <div class="flowRoot overrideFlowRoot">
-                            <div>Самоконтроль/Инстинкты</div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Дополнения">
-                        <div class="flowRoot clearfix">
-                            <div><select class="additionsOptionSelect" id="additions_4">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Дисциплины">
-                        <div class="flowRoot clearfix">
-                            <div><select class="disciplinesOptionSelect" id="discipline_4">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Дополнения">
-                        <div class="flowRoot clearfix">
-                            <div><select class="additionsOptionSelect" id="additions_5">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Дисциплины">
-                        <div class="flowRoot clearfix">
-                            <div><select class="disciplinesOptionSelect" id="discipline_5">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td rowspan="2" data-name="Добродетели">
-                        <div class="flowRoot overrideFlowRoot">
-                            <div>Смелость</div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Дополнения">
-                        <div class="flowRoot clearfix">
-                            <div><select class="additionsOptionSelect" id="additions_6">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Дисциплины">
-                        <div class="flowRoot clearfix">
-                            <div><select class="disciplinesOptionSelect" id="discipline_6">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Дополнения">
-                        <div class="flowRoot clearfix">
-                            <div><select class="additionsOptionSelect" id="additions_7">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td data-name="Дисциплины">
-                        <div class="flowRoot clearfix">
-                            <div><select class="disciplinesOptionSelect" id="discipline_7">
-                                </select></div>
-                            <div class="pointContainer" data-element-count="5">
-                            </div>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
-            <div class="customHeader">
-                <hr>
-                <hr>
-            </div>
-            <table class="basicInfoTable">
-                <tr>
-                    <th class="oneThird">Пороки/Добродетели</th>
-                    <th class="oneThird">Человечность/Путь</th>
-                    <th colspan="2" class="oneThird">Здоровье</th>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_0">
-                        </select>
-                    </td>
-                    <td data-name="Человечность/Путь" class="centered">
-                        <input type="text" id="humanity_path" />
-                        <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.humanity_path, true)"></button>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <div>
-                            Задет<br>
-                        </div>
-                    </td>
-                    <td class="fromRight hideIfScreenNarrow">
-                        <input class="noClick" type="checkbox" />
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_1">
-                        </select>
-                    </td>
-                    <td data-name="Человечность/Путь" class="centered">
-                        <div class="pointContainer" data-element-count="10"></div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <div>
-                            Поврежден<br>
-                        </div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <label>-1<input class="fromRight noClick" type="checkbox" /></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_2">
-                        </select>
-                    </td>
-                    <td class="centered hideIfScreenNarrow">
-                        <div class="customHeader">Сила Воли</div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <div>
-                            Ранен<br>
-                        </div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <label>-1<input class="fromRight noClick" type="checkbox" /></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_3">
-                        </select>
-                    </td>
-                    <td data-name="Сила Воли" class="centered">
-                        <div class="pointContainer" data-element-count="10">
-                        </div>
-                    <td class="hideIfScreenNarrow">
-                        <div>
-                            Тяжело Ранен<br>
-                        </div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <label>-2<input class="fromRight noClick" type="checkbox" /></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_4">
-                        </select>
-                    </td>
-                    <td class="centered hideIfScreenNarrow">
-                        <div class="inlineBlock">
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                        </div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <div>
-                            Травмирован<br>
-                        </div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <label>-2<input class="fromRight noClick" type="checkbox" /></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_5">
-                        </select>
-                    </td>
-                    <td class="centered hideIfScreenNarrow">
-                        <div class="customHeader">Запас Крови</div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <div>
-                            Искалечен<br>
-                        </div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <label>-5<input class="fromRight noClick" type="checkbox" /></label>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_6">
-                        </select>
-                    </td>
-                    <td class="centered hideIfScreenNarrow">
-                        <div class="inlineBlock">
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                        </div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <div>
-                            Обездвижен<br>
-                        </div>
-                    </td>
-                    <td class="fromRight hideIfScreenNarrow">
-                        <input class="noClick" type="checkbox" />
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_7">
-                        </select>
-                    </td>
-                    <td class="centered hideIfScreenNarrow">
-                        <div class="inlineBlock">
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                        </div>
-                    </td>
-                    <td class="hideIfScreenNarrow">
-                        <div>
-                            Торпор<br>
-                        </div>
-                    </td>
-                    <td class="fromRight hideIfScreenNarrow">
-                        <input class="noClick" type="checkbox" />
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_8">
-                        </select>
-                    </td>
-                    <td class="centered hideIfScreenNarrow">
-                        <div class="inlineBlock">
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                        </div>
-                    </td>
-                    <td colspan="2" class="centered oneThird hideIfScreenNarrow">
-                        <div class="customHeader">Слабость</div>
-                    </td>
-                </tr>
-                <tr>
-                    <td data-name="Пороки/Добродетели" class="centered">
-                        <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_9">
-                        </select>
-                    </td>
-                    <td class="centered hideIfScreenNarrow">
-                        <div class="inlineBlock">
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                            <input class="noClick" type="checkbox" />
-                        </div>
-                    </td>
-                    <td data-name="Слабость" colspan="2" class="centered oneThird">
-                        <input type="text" />
-                    </td>
-                </tr>
-            </table>
-        </form>
     </div>
+    <div class="topBar no-print">
+        <button id="switchColorModeButton" onclick="switchColorMode()"></button>
+    </div>
+    <form>
+        <table class="basicInfoTable">
+            <caption>Листок персонажа вампира</caption>
+            <tr>
+                <td class="hideIfScreenNarrow">Имя</td>
+                <td data-name="Имя">
+                    <input type="text" id="characterName" />
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterName)"></button>
+                </td>
+                <td class="hideIfScreenNarrow">Натура</td>
+                <td data-name="Натура">
+                    <input type="text" id="characterNature" />
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.nature)"></button>
+                </td>
+                <td class="hideIfScreenNarrow">Поколение</td>
+                <td data-name="Поколение" class="centered">
+                    <select id="characterGenerationList">
+                        <option value="3">III</option>
+                        <option value="4">IV</option>
+                        <option value="5">V</option>
+                        <option value="6">VI</option>
+                        <option value="7">VII</option>
+                        <option value="8">VIII</option>
+                        <option value="9">IX</option>
+                        <option value="10">X</option>
+                        <option value="11">XI</option>
+                        <option value="12">XII</option>
+                        <option value="13" selected>XIII</option>
+                        <option value="14">XIV</option>
+                        <option value="15">XV</option>
+                    </select>
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterGenerationList)"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="hideIfScreenNarrow">Игрок</td>
+                <td data-name="Игрок">
+                    <input type="text" id="characterUser" />
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterUser)"></button>
+                </td>
+                <td class="hideIfScreenNarrow">Маска</td>
+                <td data-name="Маска">
+                    <input type="text" id="characterMask" />
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.mask)"></button>
+                </td>
+                <td class="hideIfScreenNarrow">Убежище</td>
+                <td data-name="Убежище">
+                    <input type="text" id="characterShelter" />
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterShelter)"></button>
+                </td>
+            </tr>
+            <tr>
+                <td class="hideIfScreenNarrow">Хроника</td>
+                <td data-name="Хроника">
+                    <input type="text" id="characterStory" />
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterStory)"></button>
+                </td>
+                <td class="hideIfScreenNarrow">Клан</td>
+                <td data-name="Клан" class="centered">
+                    <select id="characterClan" required>
+                        <option value>Empty</option>
+                    </select>
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterClan)"></button>
+                </td>
+                <td class="hideIfScreenNarrow">Концепт</td>
+                <td data-name="Концепт">
+                    <input type="text" id="characterConcept" />
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.characterConcept)"></button>
+                </td>
+            </tr>
+        </table>
+        <div class="customHeader">
+            <hr>Атрибуты
+            <hr>
+        </div>
+        <table class="basicInfoTable">
+            <tr>
+                <th>Физические</th>
+                <th>Социальные</th>
+                <th>Ментайные</th>
+            </tr>
+            <tr>
+                <td data-name="Физические">
+                    <div class="flowRoot clearfix">
+                        <div>Сила
+                            <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesStrength)"></button>
+                        </div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Социальные">
+                    <div class="flowRoot clearfix">
+                        <div>Обаяние
+                            <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesCharm)"></button>
+                        </div>
+                        <div class="pointContainer noClick" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Ментайные">
+                    <div class="flowRoot clearfix">
+                        <div>Восприятие
+                            <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesPerception)"></button>
+                        </div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Физические">
+                    <div class="flowRoot clearfix">
+                        <div>Ловкость
+                            <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesAgility)"></button>
+                        </div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Социальные">
+                    <div class="flowRoot clearfix">
+                        <div>Манипуляция
+                            <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesManipulation)"></button>
+                        </div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Ментайные">
+                    <div class="flowRoot clearfix">
+                        <div>Интеллект
+                            <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesIntelligence)"></button>
+                        </div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Физические">
+                    <div class="flowRoot clearfix">
+                        <div>Выносливость
+                            <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesStamina)"></button>
+                        </div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Социальные">
+                    <div class="flowRoot clearfix">
+                        <div>Внешность
+                            <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesAppearance)"></button>
+                        </div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Ментайные">
+                    <div class="flowRoot clearfix">
+                        <div>Смекалка
+                            <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.attributesAcumen)"></button>
+                        </div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="customHeader">
+            <hr>Способности
+            <hr>
+        </div>
+        <table class="basicInfoTable">
+            <tr>
+                <th>Таланты</th>
+                <th>Навыки</th>
+                <th>Познания</th>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Атлетика</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Безопасность</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Академические</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Внимательность</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Вождение</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Законы</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Запугивание</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Выживание</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Компьютеры</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Знание улиц</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Исполнение</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Лингвистика</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Лидерство</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Знание животных</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Медицина</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Рукопашный бой</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Ремесла</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Научные</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Уклонение</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Скрытность</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Оккультизм</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Хитрость</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Стрельба</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Политика</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Экспрессия</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Фехтование</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Расследование</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Таланты">
+                    <div class="flowRoot clearfix">
+                        <div>Эмпатия</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Навыки">
+                    <div class="flowRoot clearfix">
+                        <div>Этикет</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Познания">
+                    <div class="flowRoot clearfix">
+                        <div>Финансы</div>
+                        <div class="pointContainer" data-element-count="8">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div class="customHeader">
+            <hr>Преимущества
+            <hr>
+        </div>
+        <table class="basicInfoTable">
+            <tr>
+                <th class="percent30">Дополнения</th>
+                <th class="percent50">Дисциплины</th>
+                <th>Добродетели</th>
+            </tr>
+            <tr>
+                <td data-name="Дополнения">
+                    <div class="flowRoot clearfix">
+                        <div><select class="additionsOptionSelect" id="additions_0">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Дисциплины">
+                    <div class="flowRoot clearfix">
+                        <div><select class="disciplinesOptionSelect" id="discipline_0">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td data-name="Дополнения">
+                    <div class="flowRoot clearfix">
+                        <div><select class="additionsOptionSelect" id="additions_1">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Дисциплины">
+                    <div class="flowRoot clearfix">
+                        <div><select class="disciplinesOptionSelect" id="discipline_1">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td rowspan="2" data-name="Добродетели">
+                    <div class="flowRoot overrideFlowRoot">
+                        <div>Сознательность/Убежденность</div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Дополнения">
+                    <div class="flowRoot clearfix">
+                        <div><select class="additionsOptionSelect" id="additions_2">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Дисциплины">
+                    <div class="flowRoot clearfix">
+                        <div><select class="disciplinesOptionSelect" id="discipline_2">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Дополнения">
+                    <div class="flowRoot clearfix">
+                        <div><select class="additionsOptionSelect" id="additions_3">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Дисциплины">
+                    <div class="flowRoot clearfix">
+                        <div><select class="disciplinesOptionSelect" id="discipline_3">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td rowspan="2" data-name="Добродетели">
+                    <div class="flowRoot overrideFlowRoot">
+                        <div>Самоконтроль/Инстинкты</div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Дополнения">
+                    <div class="flowRoot clearfix">
+                        <div><select class="additionsOptionSelect" id="additions_4">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Дисциплины">
+                    <div class="flowRoot clearfix">
+                        <div><select class="disciplinesOptionSelect" id="discipline_4">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Дополнения">
+                    <div class="flowRoot clearfix">
+                        <div><select class="additionsOptionSelect" id="additions_5">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Дисциплины">
+                    <div class="flowRoot clearfix">
+                        <div><select class="disciplinesOptionSelect" id="discipline_5">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td rowspan="2" data-name="Добродетели">
+                    <div class="flowRoot overrideFlowRoot">
+                        <div>Смелость</div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Дополнения">
+                    <div class="flowRoot clearfix">
+                        <div><select class="additionsOptionSelect" id="additions_6">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Дисциплины">
+                    <div class="flowRoot clearfix">
+                        <div><select class="disciplinesOptionSelect" id="discipline_6">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Дополнения">
+                    <div class="flowRoot clearfix">
+                        <div><select class="additionsOptionSelect" id="additions_7">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td data-name="Дисциплины">
+                    <div class="flowRoot clearfix">
+                        <div><select class="disciplinesOptionSelect" id="discipline_7">
+                            </select></div>
+                        <div class="pointContainer" data-element-count="5">
+                        </div>
+                    </div>
+                </td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="customHeader">
+            <hr>
+            <hr>
+        </div>
+        <table class="basicInfoTable">
+            <tr>
+                <th class="oneThird">Пороки/Добродетели</th>
+                <th class="oneThird">Человечность/Путь</th>
+                <th colspan="2" class="oneThird">Здоровье</th>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_0">
+                    </select>
+                </td>
+                <td data-name="Человечность/Путь" class="centered">
+                    <input type="text" id="humanity_path" />
+                    <button type="button" class="buttonModalWindow no-print" onclick="openModalWindow(tooltipsDescriptionDictionary.ru.humanity_path, true)"></button>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <div>
+                        Задет<br>
+                    </div>
+                </td>
+                <td class="fromRight hideIfScreenNarrow">
+                    <input class="noClick" type="checkbox" />
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_1">
+                    </select>
+                </td>
+                <td data-name="Человечность/Путь" class="centered">
+                    <div class="pointContainer" data-element-count="10"></div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <div>
+                        Поврежден<br>
+                    </div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <label>-1<input class="fromRight noClick" type="checkbox" /></label>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_2">
+                    </select>
+                </td>
+                <td class="centered hideIfScreenNarrow">
+                    <div class="customHeader">Сила Воли</div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <div>
+                        Ранен<br>
+                    </div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <label>-1<input class="fromRight noClick" type="checkbox" /></label>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_3">
+                    </select>
+                </td>
+                <td data-name="Сила Воли" class="centered">
+                    <div class="pointContainer" data-element-count="10">
+                    </div>
+                <td class="hideIfScreenNarrow">
+                    <div>
+                        Тяжело Ранен<br>
+                    </div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <label>-2<input class="fromRight noClick" type="checkbox" /></label>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_4">
+                    </select>
+                </td>
+                <td class="centered hideIfScreenNarrow">
+                    <div class="inlineBlock">
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                    </div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <div>
+                        Травмирован<br>
+                    </div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <label>-2<input class="fromRight noClick" type="checkbox" /></label>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_5">
+                    </select>
+                </td>
+                <td class="centered hideIfScreenNarrow">
+                    <div class="customHeader">Запас Крови</div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <div>
+                        Искалечен<br>
+                    </div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <label>-5<input class="fromRight noClick" type="checkbox" /></label>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_6">
+                    </select>
+                </td>
+                <td class="centered hideIfScreenNarrow">
+                    <div class="inlineBlock">
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                    </div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <div>
+                        Обездвижен<br>
+                    </div>
+                </td>
+                <td class="fromRight hideIfScreenNarrow">
+                    <input class="noClick" type="checkbox" />
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_7">
+                    </select>
+                </td>
+                <td class="centered hideIfScreenNarrow">
+                    <div class="inlineBlock">
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                    </div>
+                </td>
+                <td class="hideIfScreenNarrow">
+                    <div>
+                        Торпор<br>
+                    </div>
+                </td>
+                <td class="fromRight hideIfScreenNarrow">
+                    <input class="noClick" type="checkbox" />
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_8">
+                    </select>
+                </td>
+                <td class="centered hideIfScreenNarrow">
+                    <div class="inlineBlock">
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                    </div>
+                </td>
+                <td colspan="2" class="centered oneThird hideIfScreenNarrow">
+                    <div class="customHeader">Слабость</div>
+                </td>
+            </tr>
+            <tr>
+                <td data-name="Пороки/Добродетели" class="centered">
+                    <select class="advantagesDisadvantagesOptionSelect" id="AdvantagesDisadvantages_9">
+                    </select>
+                </td>
+                <td class="centered hideIfScreenNarrow">
+                    <div class="inlineBlock">
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                        <input class="noClick" type="checkbox" />
+                    </div>
+                </td>
+                <td data-name="Слабость" colspan="2" class="centered oneThird">
+                    <input type="text" />
+                </td>
+            </tr>
+        </table>
+    </form>
 </body>
 
 </html>
