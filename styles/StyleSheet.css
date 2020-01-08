@@ -9,7 +9,7 @@ html {
     font-size: 1em
 }
 
-form {
+body>form {
     margin-top: 30px
 }
 
@@ -129,10 +129,19 @@ form {
     z-index: 1
 }
 
+.topBar>form {
+    display: inline-block
+}
+
 .topBar button {
-    float: right;
+    background-color: #999;
+    border-radius: 8px;
     margin: 5px;
     max-height: 20px
+}
+
+.topBar>button {
+    float: right
 }
 
 /* End top bar style */
@@ -142,7 +151,7 @@ form {
     background: #000
 }
 
-.darkColorMode form {
+.darkColorMode body>form {
     filter: invert(1);
     -webkit-filter: invert(1)
 }

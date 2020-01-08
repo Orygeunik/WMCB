@@ -10,7 +10,7 @@
         width: 210mm
     }
 
-    form {
+    body>form {
         margin-top: 0
     }
 
@@ -46,7 +46,7 @@
         background: #fff
     }
 
-    .darkColorMode form {
+    .darkColorMode body>form {
         filter: invert(0);
         -webkit-filter: invert(0)
     }
