@@ -2,6 +2,13 @@
 /*jshint node: true */
 "use strict";
 
+const interfaceNamingDictionary = {
+    ru: {
+        switchColorModeButtonNameLight: "Включить \"Светлый режим\"",
+        switchColorModeButtonNameDark: "Включить \"Тёмный режим\""
+    }
+};
+
 const advantagesDisadvantagesOptions = [
     { "value": "Empty", "text": "Пусто", "disabled": false, "selected": true },
     { "text": "Достоинства", "disabled": true, "selected": false },

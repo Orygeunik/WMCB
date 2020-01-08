@@ -10,6 +10,7 @@ html {
 }
 
 .basicInfoTable {
+    margin-top: 30px;
     width: 80%
 }
 
@@ -114,17 +115,37 @@ html {
     margin: 5px 0 0
 }
 
-@media (prefers-color-scheme: dark) {
-    html {
-        background: black;
-        filter: invert(1);
-    }
-
-    option {
-        background: black;
-        color: white;
-    }
+/* Top bar style */
+.topBar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    height: 30px;
+    top: 0;
+    width: 100%;
 }
+
+.topBar button {
+    float: right;
+    margin: 5px;
+    max-height: 20px;
+}
+/* End top bar style */
+
+/* Color mode switch */
+.darkColorMode {
+    background: black;
+}
+
+.darkColorMode form {
+    filter: invert(1);
+}
+
+.darkColorMode option {
+    background: black;
+    color: white;
+}
+/* End color mode switch*/
 
 @media screen and (max-width:790px) {
     table {

@@ -156,7 +156,27 @@ function addOptions(element, optionArray) {
     }
 }
 
+function switchColorMode() {
+    let setDarkMode = document.documentElement.classList.toggle("darkColorMode");
+    let switchButton = document.getElementById("switchColorModeButton");
+
+    if (setDarkMode) {
+        switchButton.innerText = interfaceNamingDictionary.ru.switchColorModeButtonNameLight;
+    } else {
+        switchButton.innerText = interfaceNamingDictionary.ru.switchColorModeButtonNameDark;
+    }
+}
+
+function setPreferColorMode() {
+    let match = window.matchMedia("(prefers-color-scheme: dark)");
+    if (match.matches) {
+        switchColorMode();
+    }
+}
+
 function tuningDocument() {
+
+    setPreferColorMode();
 
     let divs = document.getElementsByClassName("pointContainer");
     for (let index = 0; index < divs.length; index++) {
