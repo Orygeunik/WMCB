@@ -2,10 +2,10 @@
 /*jshint node: true */
 "use strict";
 
-var modalWindow;
-var modalWindowContentParagraph;
-var modalWindowCloseDummy;
-var mainBodyElement;
+let modalWindow;
+let modalWindowContentParagraph;
+let modalWindowCloseDummy;
+let mainBodyElement;
 
 function initModalWindowSystem() {
     modalWindow = document.getElementById("descriptionModalWindow");

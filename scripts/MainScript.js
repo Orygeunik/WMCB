@@ -1,7 +1,10 @@
 /*jshint esversion: 6 */
 /*jshint node: true */
 "use strict";
-var runtimeCheckboxIDCounter = 0;
+
+let runtimeCheckboxIDCounter = 0;
+let switchModeButton;
+let modalWindowColorScheme;
 
 function setEmptyPoint(inputElement) {
 
@@ -158,12 +161,15 @@ function addOptions(element, optionArray) {
 
 function switchColorMode() {
     let setDarkMode = document.documentElement.classList.toggle("darkColorMode");
-    let switchButton = document.getElementById("switchColorModeButton");
 
     if (setDarkMode) {
-        switchButton.innerText = interfaceNamingDictionary.ru.switchColorModeButtonNameLight;
+        modalWindowColorScheme.classList.toggle("modalWindowDarkColor");
+
+        switchModeButton.innerText = interfaceNamingDictionary.ru.switchColorModeButtonNameLight;
     } else {
-        switchButton.innerText = interfaceNamingDictionary.ru.switchColorModeButtonNameDark;
+        modalWindowColorScheme.classList.toggle("modalWindowDarkColor");
+
+        switchModeButton.innerText = interfaceNamingDictionary.ru.switchColorModeButtonNameDark;
     }
 }
 
@@ -175,6 +181,8 @@ function setPreferColorMode() {
 }
 
 function tuningDocument() {
+    switchModeButton = document.getElementById("switchColorModeButton");
+    modalWindowColorScheme = document.getElementById("descriptionModalWindow");
 
     setPreferColorMode();
 
