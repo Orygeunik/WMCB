@@ -136,12 +136,13 @@ body>form {
 .topBar button {
     background-color: #999;
     border-radius: 8px;
-    margin: 5px;
+    margin: 5px 0 5px 5px;
     max-height: 20px
 }
 
 .topBar>button {
-    float: right
+    float: right;
+    margin: 5px 5px 5px 0
 }
 
 /* End top bar style */
