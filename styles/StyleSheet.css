@@ -23,6 +23,7 @@ body>form {
 }
 
 .basicInfoTable td input[type=text]:not(:last-child) {
+    -webkit-flex: 1;
     flex: 1
 }
 
@@ -52,8 +53,8 @@ body>form {
 .additionsOptionSelect,
 .advantagesDisadvantagesOptionSelect,
 .disciplinesOptionSelect {
-    -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    -webkit-box-shadow: none;
     box-shadow: none
 }
 
@@ -120,6 +121,8 @@ body>form {
 
 .flexClean {
     clear: left;
+    display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex
 }
 
@@ -163,8 +166,8 @@ body>form {
 }
 
 .darkColorMode body>form {
-    filter: invert(1);
-    -webkit-filter: invert(1)
+    -webkit-filter: invert(1);
+    filter: invert(1)
 }
 
 .darkColorMode option {

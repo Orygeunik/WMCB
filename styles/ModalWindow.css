@@ -14,8 +14,8 @@
 .modalWindowDarkColor {
     background-color: #fff;
     background-color: rgba(0, 0, 0, .1);
-    filter: invert(1);
-    -webkit-filter: invert(1)
+    -webkit-filter: invert(1);
+    filter: invert(1)
 }
 
 .modalWindowContent {
