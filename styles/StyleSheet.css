@@ -23,7 +23,8 @@ body>form {
 }
 
 .basicInfoTable td input[type=text]:not(:last-child) {
-    width: calc(100% - 30px)
+    -webkit-flex: 1;
+    flex: 1
 }
 
 .basicInfoTable input[type=checkbox] {
@@ -52,8 +53,8 @@ body>form {
 .additionsOptionSelect,
 .advantagesDisadvantagesOptionSelect,
 .disciplinesOptionSelect {
-    -webkit-box-shadow: none;
     -moz-box-shadow: none;
+    -webkit-box-shadow: none;
     box-shadow: none
 }
 
@@ -118,6 +119,18 @@ body>form {
     margin: 5px 0 0
 }
 
+.flexClean {
+    clear: left;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex
+}
+
+.inlineClean {
+    clear: left;
+    display: inline
+}
+
 /* Top bar style */
 .topBar {
     background-color: #333;
@@ -136,12 +149,13 @@ body>form {
 .topBar button {
     background-color: #999;
     border-radius: 8px;
-    margin: 5px;
+    margin: 5px 0 5px 5px;
     max-height: 20px
 }
 
 .topBar>button {
-    float: right
+    float: right;
+    margin: 5px 5px 5px 0
 }
 
 /* End top bar style */
@@ -152,8 +166,8 @@ body>form {
 }
 
 .darkColorMode body>form {
-    filter: invert(1);
-    -webkit-filter: invert(1)
+    -webkit-filter: invert(1);
+    filter: invert(1)
 }
 
 .darkColorMode option {
