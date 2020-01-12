@@ -23,7 +23,7 @@ body>form {
 }
 
 .basicInfoTable td input[type=text]:not(:last-child) {
-    width: calc(100% - 30px)
+    flex: 1
 }
 
 .basicInfoTable input[type=checkbox] {
@@ -116,6 +116,16 @@ body>form {
 .flowRoot div:nth-child(2) {
     float: right;
     margin: 5px 0 0
+}
+
+.flexClean {
+    clear: left;
+    display: flex
+}
+
+.inlineClean {
+    clear: left;
+    display: inline
 }
 
 /* Top bar style */
