@@ -27,6 +27,11 @@ body>form {
     flex: 1
 }
 
+.basicInfoTable td select:not(:last-child) {
+    -webkit-flex: 1;
+    flex: 1
+}
+
 .basicInfoTable input[type=checkbox] {
     pointer-events: none
 }
@@ -82,7 +87,8 @@ body>form {
 }
 
 .pointContainer {
-    display: inline-block
+    display: inline-block;
+    margin: 0 0 0 5px
 }
 
 .pointContainer img {
@@ -96,6 +102,10 @@ body>form {
     margin-right: auto;
     text-align: center;
     width: 80%
+}
+
+.customHeader hr {
+    margin: 20px 0
 }
 
 .flowRoot {
@@ -126,9 +136,17 @@ body>form {
     display: flex
 }
 
+table td select {
+    max-width: calc(100% - 114px)
+}
+
 .inlineClean {
     clear: left;
     display: inline
+}
+
+.inlineClean>select {
+    max-width: 100%
 }
 
 /* Top bar style */
@@ -218,6 +236,10 @@ body>form {
     .hideIfScreenNarrow,
     table th {
         display: none
+    }
+
+    .inlineClean {
+        display: flex
     }
 }
 
