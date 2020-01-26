@@ -34,8 +34,16 @@
         width: 100%
     }
 
+    .customHeader hr {
+        margin: 10px 0
+    }
+
     .basicInfoTable td input[type=text]:not(:last-child) {
         width: 100%
+    }
+
+    table td select {
+        max-width: 100%
     }
 
     .centered {
@@ -83,6 +91,10 @@
 
     .percent30 {
         width: 30%
+    }
+
+    .percent35 {
+        width: 35%
     }
 
     .percent50 {
